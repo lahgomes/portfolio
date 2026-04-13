@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink, Github, ImageOff } from "lucide-react";
+import { ExternalLink, ImageOff } from "lucide-react";
+import { GithubIcon } from "./icons/SocialIcons";
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
 import { projects } from "@/data/projects";
@@ -102,7 +103,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-400 hover:text-rose-500 transition-colors"
                     >
-                      <Github size={13} />
+                      <GithubIcon size={13} />
                       Código
                     </a>
                   )}
@@ -130,7 +131,7 @@ export default function Projects() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-5 py-2.5 text-sm font-semibold text-zinc-600 hover:border-rose-200 hover:text-rose-500 transition-colors"
           >
-            <Github size={15} />
+            <GithubIcon size={15} />
             Ver todos no GitHub
           </a>
         </div>
