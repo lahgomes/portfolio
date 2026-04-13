@@ -58,7 +58,6 @@ export default function Experience() {
         >
           {EXPERIENCE.map((item, i) => (
             <div key={i} className="relative flex gap-5 pb-10 last:pb-0">
-              {/* Timeline line + dot */}
               <div className="flex flex-col items-center">
                 <div className="mt-1.5 h-3.5 w-3.5 shrink-0 rounded-full border-2 border-rose-400 bg-white" />
                 {i < EXPERIENCE.length - 1 && (
@@ -66,7 +65,6 @@ export default function Experience() {
                 )}
               </div>
 
-              {/* Card */}
               <div className="w-full rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow mb-1">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>

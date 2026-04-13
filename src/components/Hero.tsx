@@ -4,7 +4,6 @@ import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pt-20 text-center sm:px-8">
-      {/* Soft background blobs */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 -right-40 h-150 w-150 rounded-full bg-rose-100/50 blur-3xl"
@@ -15,13 +14,7 @@ export default function Hero() {
       />
 
       <div className="relative z-10 flex flex-col items-center gap-5">
-        {/* Location badge */}
-        <span className="hero-item inline-flex items-center gap-1.5 rounded-full border border-rose-200 bg-rose-50 px-3.5 py-1 text-xs font-semibold text-rose-500">
-          <span className="h-1.5 w-1.5 rounded-full bg-rose-400 animate-pulse" />
-          Santos, SP — Aberta a oportunidades
-        </span>
 
-        {/* Name */}
         <h1 className="hero-item text-5xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl">
           Larissa{" "}
           <span className="bg-linear-to-r from-rose-500 to-pink-400 bg-clip-text text-transparent">
@@ -29,20 +22,17 @@ export default function Hero() {
           </span>
         </h1>
 
-        {/* Role */}
         <p className="hero-item text-lg font-medium text-zinc-500 sm:text-xl">
           Desenvolvedora{" "}
           <span className="font-semibold text-zinc-800">Front-end</span>
         </p>
 
-        {/* Tagline */}
         <p className="hero-item max-w-lg text-zinc-500 leading-relaxed">
           4 anos de experiência construindo produtos web com React, Next.js e
           TypeScript — com foco em performance, SEO técnico e experiências que
           encantam usuários.
         </p>
 
-        {/* CTAs */}
         <div className="hero-item flex flex-wrap items-center justify-center gap-3 pt-1">
           <a
             href="#projetos"
@@ -58,7 +48,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Social links */}
         <div className="hero-item flex items-center gap-4 pt-1 text-zinc-400">
           <a
             href="https://github.com/lahgomes"
@@ -82,7 +71,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <a
         href="#sobre"
         aria-label="Rolar para baixo"

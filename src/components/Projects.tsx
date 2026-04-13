@@ -41,7 +41,6 @@ function ProjectGallery({ images, alt }: { images?: string[]; alt: string }) {
 
       {list.length > 1 && (
         <>
-          {/* Prev / Next arrows */}
           <button
             onClick={prev}
             aria-label="Imagem anterior"
@@ -57,7 +56,6 @@ function ProjectGallery({ images, alt }: { images?: string[]; alt: string }) {
             <ChevronRight size={16} className="text-zinc-700" />
           </button>
 
-          {/* Dot indicators */}
           <div className="absolute bottom-2 left-1/2 z-20 flex -translate-x-1/2 gap-1.5">
             {list.map((_, i) => (
               <button
@@ -116,7 +114,6 @@ export default function Projects() {
                   : "border-zinc-200"
               }`}
             >
-              {/* Gallery */}
               <div className="relative h-48 w-full overflow-hidden bg-zinc-100 shrink-0">
                 <ProjectGallery images={project.images ?? (project.image ? [project.image] : [])} alt={project.title} />
                 {project.highlight && (
@@ -126,7 +123,6 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Content */}
               <div className="flex flex-1 flex-col gap-3 p-5">
                 <h3 className="text-base font-bold text-zinc-900">
                   {project.title}

@@ -21,7 +21,6 @@ body {
   color: var(--foreground);
 }
 
-/* ── Scroll-reveal ────────────────────────────── */
 .fade-up {
   opacity: 0;
   transform: translateY(28px);
@@ -36,7 +35,6 @@ body {
 .fade-up.visible.delay-3 { transition-delay: 300ms; }
 .fade-up.visible.delay-4 { transition-delay: 400ms; }
 
-/* ── Hero load animations ─────────────────────── */
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }

@@ -30,7 +30,6 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        {/* Logo */}
         <a
           href="#"
           className="text-base font-bold tracking-tight text-zinc-900 hover:text-rose-500 transition-colors"
@@ -39,7 +38,6 @@ export default function Header() {
           larissa<span className="text-rose-500">.</span>
         </a>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-7">
           {NAV_LINKS.map((l) => (
             <a
@@ -52,7 +50,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
         <a
           href="/cv-larissa-gomes.pdf"
           download
@@ -61,7 +58,6 @@ export default function Header() {
           Currículo
         </a>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen((v) => !v)}
           className="md:hidden rounded-lg p-1.5 text-zinc-600 hover:text-rose-500 transition-colors"
@@ -71,7 +67,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-rose-100 bg-white/95 backdrop-blur-lg px-5 pb-4 pt-3 flex flex-col gap-1">
           {NAV_LINKS.map((l) => (

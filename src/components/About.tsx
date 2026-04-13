@@ -10,7 +10,6 @@ const TAGS = [
   "UX Design", "Storybook", "Node.js (aprendendo)",
 ];
 
-// ── Profile photo with fallback ───────────────────────
 function ProfilePhoto() {
   const [error, setError] = useState(false);
 
@@ -114,7 +113,6 @@ export default function About() {
   );
 }
 
-// ── Shared section heading ───────────────────────────
 export function SectionHeading({
   label,
   title,
