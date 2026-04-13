@@ -44,26 +44,26 @@ function ProjectGallery({ images, alt }: { images?: string[]; alt: string }) {
           <button
             onClick={prev}
             aria-label="Imagem anterior"
-            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/80 p-1 shadow hover:bg-white transition-colors"
+            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-2 shadow-md border border-zinc-200 hover:bg-rose-50 hover:border-rose-200 transition-colors"
           >
-            <ChevronLeft size={16} className="text-zinc-700" />
+            <ChevronLeft size={18} className="text-zinc-700" />
           </button>
           <button
             onClick={next}
             aria-label="Próxima imagem"
-            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/80 p-1 shadow hover:bg-white transition-colors"
+            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-2 shadow-md border border-zinc-200 hover:bg-rose-50 hover:border-rose-200 transition-colors"
           >
-            <ChevronRight size={16} className="text-zinc-700" />
+            <ChevronRight size={18} className="text-zinc-700" />
           </button>
 
-          <div className="absolute bottom-2 left-1/2 z-20 flex -translate-x-1/2 gap-1.5">
+          <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center gap-2 pb-2.5 pt-6 bg-linear-to-t from-black/40 to-transparent">
             {list.map((_, i) => (
               <button
                 key={i}
                 onClick={(e) => { e.preventDefault(); setCurrent(i); }}
                 aria-label={`Ir para imagem ${i + 1}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === current ? "w-4 bg-rose-500" : "w-1.5 bg-white/70"
+                className={`h-2 rounded-full transition-all ${
+                  i === current ? "w-5 bg-white shadow" : "w-2 bg-white/60 hover:bg-white/80"
                 }`}
               />
             ))}

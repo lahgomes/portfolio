@@ -1,5 +1,79 @@
+"use client";
+
+import { useRef, useState, useEffect } from "react";
 import { ArrowDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
+
+function AnimatedName() {
+  const ref = useRef<HTMLHeadingElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const angle =
+      Math.atan2(e.clientY - cy, e.clientX - cx) * (180 / Math.PI) + 90;
+    el.style.setProperty("--grad-angle", `${angle}deg`);
+  };
+
+  return (
+    <h1
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      className="hero-item group cursor-default text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
+    >
+      <span className="relative">
+        <span className="text-zinc-900 transition-opacity duration-300 group-hover:opacity-0">
+          larissa gomes
+        </span>
+        <span
+          className="absolute inset-0 bg-clip-text text-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            backgroundImage:
+              "linear-gradient(var(--grad-angle, 135deg), #f43f5e, #f472b6)",
+          }}
+        >
+          larissa gomes
+        </span>
+      </span>
+      <span className="text-rose-500">.</span>
+    </h1>
+  );
+}
+
+function Typewriter({ text, delay = 0 }: { text: string; delay?: number }) {
+  const [displayed, setDisplayed] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    const start = setTimeout(() => {
+      let i = 0;
+      const timer = setInterval(() => {
+        i++;
+        setDisplayed(text.slice(0, i));
+        if (i >= text.length) {
+          clearInterval(timer);
+          setDone(true);
+        }
+      }, 55);
+      return () => clearInterval(timer);
+    }, delay);
+    return () => clearTimeout(start);
+  }, [text, delay]);
+
+  return (
+    <span>
+      {displayed}
+      <span
+        className={`inline-block w-0.5 h-[0.85em] bg-rose-400 ml-0.5 align-middle ${
+          done ? "animate-pulse" : ""
+        }`}
+      />
+    </span>
+  );
+}
 
 export default function Hero() {
   return (
@@ -15,18 +89,10 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col items-center gap-5">
 
-        <h1 className="hero-item group relative cursor-default text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-          <span className="text-zinc-500 transition-opacity duration-500 group-hover:opacity-0">
-            Larissa Gomes
-          </span>
-          <span className="absolute inset-0 bg-linear-to-r from-rose-500 to-pink-400 bg-clip-text text-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            Larissa Gomes
-          </span>
-        </h1>
+        <AnimatedName />
 
         <p className="hero-item text-lg font-medium text-zinc-500 sm:text-xl">
-          Desenvolvedora{" "}
-          <span className="font-semibold text-zinc-800">Front-end</span>
+          <Typewriter text="Desenvolvedora Front-end" delay={900} />
         </p>
 
         <p className="hero-item max-w-lg text-zinc-500 leading-relaxed">
