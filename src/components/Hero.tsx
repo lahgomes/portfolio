@@ -15,10 +15,12 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col items-center gap-5">
 
-        <h1 className="hero-item text-5xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl">
-          Larissa{" "}
-          <span className="bg-linear-to-r from-rose-500 to-pink-400 bg-clip-text text-transparent">
-            Gomes
+        <h1 className="hero-item group relative cursor-default text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+          <span className="text-zinc-500 transition-opacity duration-500 group-hover:opacity-0">
+            Larissa Gomes
+          </span>
+          <span className="absolute inset-0 bg-linear-to-r from-rose-500 to-pink-400 bg-clip-text text-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            Larissa Gomes
           </span>
         </h1>
 

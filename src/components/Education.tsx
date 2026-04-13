@@ -1,10 +1,11 @@
 "use client";
 
 import { GraduationCap, BookOpen } from "lucide-react";
+import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
 
-const EDUCATION = [
+const FORMATION = [
   {
     icon: <GraduationCap size={20} />,
     degree: "Pós-Graduação em IA e Ciência de Dados",
@@ -21,18 +22,51 @@ const EDUCATION = [
     description:
       "Formação multidisciplinar com foco em projeto, planejamento urbano e pensamento sistêmico — base sólida para UX e design de interfaces.",
   },
+];
+
+const COURSES = [
   {
     icon: <BookOpen size={20} />,
-    degree: "Cursos de Especialização",
-    institution: "Anthropic · Origamid · Alura · DIO",
-    period: "2021 — 2025",
+    degree: "Claude Code in Action",
+    institution: "Anthropic",
+    period: "2025",
     description:
-      "Claude Code in Action (Anthropic), Node.js, JS ES6 e CSS Flexbox (Origamid), Imersão Front-end (Alura), HTML, Git e Lógica de Programação (DIO).",
+      "Desenvolvimento de aplicações com IA generativa e uso de ferramentas de agentes com Claude.",
+  },
+  {
+    icon: <BookOpen size={20} />,
+    degree: "Node.js, JS ES6 e CSS Flexbox",
+    institution: "Origamid",
+    period: "2022 — 2023",
+    description:
+      "Fundamentos modernos de JavaScript, Node.js e layout responsivo com CSS Flexbox.",
+  },
+  {
+    icon: <BookOpen size={20} />,
+    degree: "Imersão Front-end",
+    institution: "Alura",
+    period: "2022",
+    description:
+      "Intensivo de front-end com HTML, CSS, JavaScript e boas práticas de desenvolvimento web.",
+  },
+  {
+    icon: <BookOpen size={20} />,
+    degree: "HTML, Git e Lógica de Programação",
+    institution: "DIO",
+    period: "2021",
+    description:
+      "Fundamentos de desenvolvimento web: HTML estrutural, versionamento com Git e lógica de programação.",
   },
 ];
 
+const TABS = ["Formação", "Cursos & Certificados"] as const;
+type Tab = (typeof TABS)[number];
+
 export default function Education() {
   const { ref, inView } = useInView();
+  const [activeTab, setActiveTab] = useState<Tab>("Formação");
+
+  const items = activeTab === "Formação" ? FORMATION : COURSES;
 
   return (
     <section
@@ -43,10 +77,26 @@ export default function Education() {
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Educação" title="Formação & Cursos" />
 
+        <div className="mt-10 flex w-fit mx-auto gap-1 rounded-xl bg-zinc-100 p-1">
+          {TABS.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+                activeTab === tab
+                  ? "bg-white shadow-sm text-zinc-900"
+                  : "text-zinc-500 hover:text-zinc-700"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
         <div
-          className={`mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3 fade-up ${inView ? "visible" : ""}`}
+          className={`mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 fade-up ${inView ? "visible" : ""}`}
         >
-          {EDUCATION.map((item, i) => (
+          {items.map((item, i) => (
             <div
               key={i}
               className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 hover:border-rose-200 hover:shadow-md transition-all"
