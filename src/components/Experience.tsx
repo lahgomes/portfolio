@@ -12,31 +12,32 @@ interface ExperienceItem {
   tags: string[];
 }
 
-// ✏️  Edite com seus dados reais de experiência
 const EXPERIENCE: ExperienceItem[] = [
   {
     role: "Desenvolvedora Front-end",
-    company: "Adicione sua empresa",
-    period: "2024 — Presente",
+    company: "Promobit",
+    period: "Mar 2022 — Fev 2026",
     location: "Remoto",
     bullets: [
-      "Desenvolvimento de interfaces com React e Next.js",
-      "Implementação de melhorias de SEO e Core Web Vitals",
-      "Colaboração com designers no Figma para entrega pixel-perfect",
+      "Evolução de produto e features do marketplace de promoções, do front ao deploy",
+      "Otimização de Core Web Vitals e SEO técnico com SEMrush e Google Search Console",
+      "Manutenção e evolução do Design System via Storybook, em parceria com UX",
+      "Monitoramento proativo de erros e performance com Sentry",
+      "Projeto interno 'Pricer': scraping de preços em Python com Flask, Selenium e Docker",
     ],
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    tags: ["Next.js", "Tailwind CSS", "React Query", "TypeScript", "Storybook", "Sentry", "Python", "Docker"],
   },
   {
     role: "Desenvolvedora Front-end Jr.",
-    company: "Adicione sua empresa",
-    period: "2022 — 2024",
+    company: "Projeto Toraline",
+    period: "Out 2021 — Fev 2022",
     location: "Santos, SP",
     bullets: [
-      "Criação de landing pages e dashboards responsivos",
-      "Integração com APIs REST e gestão de estado com React Query",
-      "Participação em code reviews e adoção de boas práticas",
+      "Desenvolvimento de plataforma educacional com React e Next.js",
+      "Criação de landing pages e interfaces responsivas mobile-first",
+      "Integração com APIs REST e gestão de estado",
     ],
-    tags: ["React", "JavaScript", "CSS", "REST APIs"],
+    tags: ["React", "Next.js", "JavaScript", "HTML", "CSS", "Scrum"],
   },
 ];
 

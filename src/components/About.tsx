@@ -6,7 +6,8 @@ import { useInView } from "@/hooks/useInView";
 
 const TAGS = [
   "React", "Next.js", "TypeScript", "Tailwind CSS",
-  "SEO", "Performance Web", "UX", "Acessibilidade",
+  "SEO Técnico", "Core Web Vitals", "Performance Web",
+  "UX Design", "Storybook", "Node.js (aprendendo)",
 ];
 
 // ── Profile photo with fallback ───────────────────────
@@ -61,22 +62,23 @@ export default function About() {
           {/* Text */}
           <div className="flex flex-col gap-5">
             <p className="text-zinc-600 leading-relaxed">
-              Sou desenvolvedora front-end com foco em criar produtos digitais
-              que unem estética e alta performance. Trabalho com{" "}
-              <strong className="text-zinc-800">React</strong>,{" "}
-              <strong className="text-zinc-800">Next.js</strong> e{" "}
-              <strong className="text-zinc-800">TypeScript</strong> no
-              dia a dia — e me importo muito com SEO, acessibilidade e Core
-              Web Vitals.
+              Desenvolvedora front-end com{" "}
+              <strong className="text-zinc-800">4 anos de experiência</strong>{" "}
+              focada em React, Next.js, TypeScript, Tailwind, performance web e
+              SEO. Formada em{" "}
+              <strong className="text-zinc-800">Arquitetura e Urbanismo</strong>{" "}
+              pela UFOP — o que trouxe perspectiva criativa e senso estético
+              para o meu trabalho no front-end.
             </p>
             <p className="text-zinc-600 leading-relaxed">
-              Formada pela{" "}
+              Atualmente expandindo conhecimentos em backend com{" "}
+              <strong className="text-zinc-800">Node.js</strong> e
+              arquitetura de aplicações, com foco em evolução para Full Stack.
+              Cursando pós-graduação em{" "}
               <strong className="text-zinc-800">
-                Universidade Federal de Ouro Preto (UFOP)
-              </strong>
-              . Moro em Santos, SP e estou aberta a oportunidades remotas.
-              Gosto de colaborar com times de produto e de construir interfaces
-              que fazem a diferença para quem usa.
+                Inteligência Artificial e Ciência de Dados
+              </strong>{" "}
+              pela Anhembi Morumbi.
             </p>
 
             <div className="flex flex-wrap gap-2 pt-1">

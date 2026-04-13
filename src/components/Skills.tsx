@@ -4,22 +4,24 @@ import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
 
 const SKILLS = [
-  { name: "HTML & CSS", level: 95, color: "from-orange-400 to-rose-400" },
-  { name: "JavaScript", level: 90, color: "from-yellow-400 to-amber-500" },
+  { name: "HTML5 & CSS3", level: 95, color: "from-orange-400 to-rose-400" },
+  { name: "JavaScript", level: 92, color: "from-yellow-400 to-amber-500" },
   { name: "TypeScript", level: 85, color: "from-blue-400 to-blue-600" },
-  { name: "React", level: 92, color: "from-cyan-400 to-sky-500" },
-  { name: "Next.js", level: 88, color: "from-zinc-600 to-zinc-800" },
+  { name: "React", level: 93, color: "from-cyan-400 to-sky-500" },
+  { name: "Next.js", level: 90, color: "from-zinc-500 to-zinc-800" },
   { name: "Tailwind CSS", level: 90, color: "from-teal-400 to-cyan-500" },
-  { name: "SEO & Performance", level: 80, color: "from-rose-400 to-pink-500" },
-  { name: "Git & GitHub", level: 85, color: "from-pink-500 to-rose-500" },
-  { name: "Node.js", level: 65, color: "from-green-500 to-emerald-600" },
-  { name: "Figma", level: 72, color: "from-violet-400 to-purple-500" },
+  { name: "SEO Técnico & Core Web Vitals", level: 82, color: "from-rose-400 to-pink-500" },
+  { name: "React Query", level: 80, color: "from-orange-400 to-amber-500" },
+  { name: "Git & GitHub", level: 88, color: "from-pink-500 to-rose-500" },
+  { name: "Figma", level: 75, color: "from-violet-400 to-purple-500" },
+  { name: "Python (em evolução)", level: 55, color: "from-green-400 to-emerald-500" },
+  { name: "Node.js (em evolução)", level: 50, color: "from-lime-500 to-green-600" },
 ];
 
 const TOOLS = [
-  "VS Code", "Vite", "pnpm", "ESLint", "Prettier",
-  "Vitest", "React Testing Library", "Storybook",
-  "Vercel", "REST APIs", "Postgres", "Prisma",
+  "Styled-Components", "SASS", "Storybook", "Jest", "Sentry",
+  "GitHub Actions", "SEMrush", "Google Search Console", "Google Analytics",
+  "Docker", "REST APIs", "Figma", "Canva", "Scrum / Kanban",
 ];
 
 export default function Skills() {

@@ -37,8 +37,9 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="hero-item max-w-lg text-zinc-500 leading-relaxed">
-          Transformo ideias em interfaces que encantam — com React, Next.js,
-          TypeScript e muita atenção para performance e UX.
+          4 anos de experiência construindo produtos web com React, Next.js e
+          TypeScript — com foco em performance, SEO técnico e experiências que
+          encantam usuários.
         </p>
 
         {/* CTAs */}

@@ -7,27 +7,27 @@ import { SectionHeading } from "./About";
 const EDUCATION = [
   {
     icon: <GraduationCap size={20} />,
-    degree: "Sistemas de Informação",
+    degree: "Pós-Graduação em IA e Ciência de Dados",
+    institution: "Universidade Anhembi Morumbi — SP",
+    period: "2025 — 2027 (cursando)",
+    description:
+      "Especialização em inteligência artificial, machine learning e análise de dados, com aplicação prática em projetos reais.",
+  },
+  {
+    icon: <GraduationCap size={20} />,
+    degree: "Bacharelado em Arquitetura e Urbanismo",
     institution: "UFOP — Universidade Federal de Ouro Preto",
-    period: "2019 — 2024",
+    period: "Concluído em 2018",
     description:
-      "Formação com ênfase em desenvolvimento de software, banco de dados, engenharia de software e experiência do usuário.",
+      "Formação multidisciplinar com foco em projeto, planejamento urbano e pensamento sistêmico — base sólida para UX e design de interfaces.",
   },
   {
     icon: <BookOpen size={20} />,
-    degree: "Desenvolvimento React — Avançado",
-    institution: "Curso Online",
-    period: "2022",
+    degree: "Cursos de Especialização",
+    institution: "Anthropic · Origamid · Alura · DIO",
+    period: "2021 — 2025",
     description:
-      "Padrões avançados de React, Context API, hooks customizados, performance e testing com Vitest.",
-  },
-  {
-    icon: <BookOpen size={20} />,
-    degree: "Next.js & TypeScript na prática",
-    institution: "Curso Online",
-    period: "2023",
-    description:
-      "App Router, Server Components, TypeScript avançado, SEO, deploy na Vercel e otimizações de Core Web Vitals.",
+      "Claude Code in Action (Anthropic), Node.js, JS ES6 e CSS Flexbox (Origamid), Imersão Front-end (Alura), HTML, Git e Lógica de Programação (DIO).",
   },
 ];
 
