@@ -15,10 +15,9 @@ export const projects: Project[] = [
     description:
       "Aplicação fullstack para organizar candidaturas de emprego. Registre vagas, acompanhe etapas do processo seletivo, adicione anotações por candidatura e controle o status em tempo real. Dashboard com visão geral completa.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
-    image: "/projects/tmj.png",
     images: [
-      "/projects/tmj.png",
       "/projects/tmj-landing-1.png",
+      "/projects/tmj.png",
       "/projects/tmj-project-2.png",
       "/projects/tmj-project-3.png",
     ],

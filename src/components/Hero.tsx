@@ -6,38 +6,45 @@ import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 
 function AnimatedName() {
   const ref = useRef<HTMLHeadingElement>(null);
+  const [mouseX, setMouseX] = useState<number | null>(null);
+
+  const text = "larissa gomes";
+  const letters = text.split("");
+  const total = letters.length;
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const el = ref.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    const angle =
-      Math.atan2(e.clientY - cy, e.clientX - cx) * (180 / Math.PI) + 90;
-    el.style.setProperty("--grad-angle", `${angle}deg`);
+    setMouseX((e.clientX - rect.left) / rect.width);
   };
+
+  const handleMouseLeave = () => setMouseX(null);
 
   return (
     <h1
       ref={ref}
       onMouseMove={handleMouseMove}
-      className="hero-item group cursor-default text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
+      onMouseLeave={handleMouseLeave}
+      className="hero-item cursor-default text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
     >
-      <span className="relative">
-        <span className="text-zinc-900 transition-opacity duration-300 group-hover:opacity-0">
-          larissa gomes
-        </span>
-        <span
-          className="absolute inset-0 bg-clip-text text-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          style={{
-            backgroundImage:
-              "linear-gradient(var(--grad-angle, 135deg), #f43f5e, #f472b6)",
-          }}
-        >
-          larissa gomes
-        </span>
-      </span>
+      {letters.map((letter, i) => {
+        const letterPos = i / (total - 1);
+        const dist = mouseX !== null ? Math.abs(mouseX - letterPos) : 1;
+        const colored = dist < 0.18;
+        return letter === " " ? (
+          <span key={i}>&nbsp;</span>
+        ) : (
+          <span
+            key={i}
+            className={`transition-colors duration-150 ${
+              colored ? "text-rose-500" : "text-zinc-900"
+            }`}
+          >
+            {letter}
+          </span>
+        );
+      })}
       <span className="text-rose-500">.</span>
     </h1>
   );

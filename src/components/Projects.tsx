@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ExternalLink, ImageOff, ChevronLeft, ChevronRight } from "lucide-react";
 import { GithubIcon } from "./icons/SocialIcons";
 import { useInView } from "@/hooks/useInView";
@@ -76,6 +76,12 @@ function ProjectGallery({ images, alt }: { images?: string[]; alt: string }) {
 
 export default function Projects() {
   const { ref, inView } = useInView();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const showArrows = projects.length > 2;
+
+  const scroll = (dir: "left" | "right") => {
+    scrollRef.current?.scrollBy({ left: dir === "left" ? -420 : 420, behavior: "smooth" });
+  };
 
   if (projects.length === 0) {
     return (
@@ -97,18 +103,40 @@ export default function Projects() {
     <section
       id="projetos"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-5 sm:px-8 bg-white"
+      className="py-24 bg-white overflow-hidden"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <SectionHeading label="Projetos" title="O que eu construí" />
+      </div>
+
+      <div className={`relative mt-12 fade-up ${inView ? "visible" : ""}`}>
+        {showArrows && (
+          <>
+            <button
+              onClick={() => scroll("left")}
+              aria-label="Projeto anterior"
+              className="hidden md:flex absolute left-3 top-1/2 -translate-y-8 z-10 h-10 w-10 items-center justify-center rounded-full bg-white border border-zinc-200 shadow-md hover:border-rose-200 hover:bg-rose-50 transition-colors"
+            >
+              <ChevronLeft size={18} className="text-zinc-700" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              aria-label="Próximo projeto"
+              className="hidden md:flex absolute right-3 top-1/2 -translate-y-8 z-10 h-10 w-10 items-center justify-center rounded-full bg-white border border-zinc-200 shadow-md hover:border-rose-200 hover:bg-rose-50 transition-colors"
+            >
+              <ChevronRight size={18} className="text-zinc-700" />
+            </button>
+          </>
+        )}
 
         <div
-          className={`mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 fade-up ${inView ? "visible" : ""}`}
+          ref={scrollRef}
+          className="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory px-5 sm:px-8 md:px-16 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {projects.map((project) => (
             <article
               key={project.title}
-              className={`group relative flex flex-col overflow-hidden rounded-2xl border transition-shadow hover:shadow-lg ${
+              className={`snap-start shrink-0 flex flex-col overflow-hidden rounded-2xl border transition-shadow hover:shadow-lg w-[85vw] sm:w-80 md:w-96 ${
                 project.highlight
                   ? "border-rose-200 shadow-sm shadow-rose-100"
                   : "border-zinc-200"
@@ -170,18 +198,18 @@ export default function Projects() {
             </article>
           ))}
         </div>
+      </div>
 
-        <div className="mt-10 text-center">
-          <a
-            href="https://github.com/lahgomes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-5 py-2.5 text-sm font-semibold text-zinc-600 hover:border-rose-200 hover:text-rose-500 transition-colors"
-          >
-            <GithubIcon size={15} />
-            Ver todos no GitHub
-          </a>
-        </div>
+      <div className="mt-10 text-center px-5 sm:px-8">
+        <a
+          href="https://github.com/lahgomes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-5 py-2.5 text-sm font-semibold text-zinc-600 hover:border-rose-200 hover:text-rose-500 transition-colors"
+        >
+          <GithubIcon size={15} />
+          Ver todos no GitHub
+        </a>
       </div>
     </section>
   );
