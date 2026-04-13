@@ -2,8 +2,10 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  /** Coloque a imagem em /public/projects/nome.png */
+  /** Imagem principal — coloque em /public/projects/nome.png */
   image?: string;
+  /** Imagens extras para galeria — coloque em /public/projects/ */
+  images?: string[];
   github?: string;
   /** URL do deploy (Vercel, etc.) */
   live?: string;
@@ -17,6 +19,12 @@ export const projects: Project[] = [
       "Aplicação fullstack para organizar candidaturas de emprego. Registre vagas, acompanhe etapas do processo seletivo, adicione anotações por candidatura e controle o status em tempo real. Dashboard com visão geral completa.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
     image: "/projects/tmj.png",
+    images: [
+      "/projects/tmj.png",
+      "/projects/tmj-landing-1.png",
+      "/projects/tmj-project-2.png",
+      "/projects/tmj-project-3.png",
+    ],
     live: "https://tmj-project.vercel.app/",
     highlight: true,
   },

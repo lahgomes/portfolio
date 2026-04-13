@@ -1,27 +1,78 @@
 "use client";
 
 import Image from "next/image";
-import { ExternalLink, ImageOff } from "lucide-react";
+import { useState } from "react";
+import { ExternalLink, ImageOff, ChevronLeft, ChevronRight } from "lucide-react";
 import { GithubIcon } from "./icons/SocialIcons";
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
 import { projects } from "@/data/projects";
 
-function ProjectImage({ src, alt }: { src?: string; alt: string }) {
-  if (!src) {
+function ProjectGallery({ images, alt }: { images?: string[]; alt: string }) {
+  const [current, setCurrent] = useState(0);
+  const list = images && images.length > 0 ? images : [];
+
+  if (list.length === 0) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-rose-50 to-pink-100 text-rose-200">
         <ImageOff size={36} />
       </div>
     );
   }
+
+  const prev = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCurrent((c) => (c - 1 + list.length) % list.length);
+  };
+  const next = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCurrent((c) => (c + 1) % list.length);
+  };
+
   return (
-    <Image
-      src={src}
-      alt={alt}
-      fill
-      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-    />
+    <>
+      <Image
+        key={list[current]}
+        src={list[current]}
+        alt={`${alt} — imagem ${current + 1}`}
+        fill
+        className="object-cover object-top transition-opacity duration-300"
+      />
+
+      {list.length > 1 && (
+        <>
+          {/* Prev / Next arrows */}
+          <button
+            onClick={prev}
+            aria-label="Imagem anterior"
+            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/80 p-1 shadow hover:bg-white transition-colors"
+          >
+            <ChevronLeft size={16} className="text-zinc-700" />
+          </button>
+          <button
+            onClick={next}
+            aria-label="Próxima imagem"
+            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/80 p-1 shadow hover:bg-white transition-colors"
+          >
+            <ChevronRight size={16} className="text-zinc-700" />
+          </button>
+
+          {/* Dot indicators */}
+          <div className="absolute bottom-2 left-1/2 z-20 flex -translate-x-1/2 gap-1.5">
+            {list.map((_, i) => (
+              <button
+                key={i}
+                onClick={(e) => { e.preventDefault(); setCurrent(i); }}
+                aria-label={`Ir para imagem ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all ${
+                  i === current ? "w-4 bg-rose-500" : "w-1.5 bg-white/70"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </>
   );
 }
 
@@ -65,9 +116,9 @@ export default function Projects() {
                   : "border-zinc-200"
               }`}
             >
-              {/* Thumbnail */}
-              <div className="relative h-44 w-full overflow-hidden bg-zinc-100 shrink-0">
-                <ProjectImage src={project.image} alt={project.title} />
+              {/* Gallery */}
+              <div className="relative h-48 w-full overflow-hidden bg-zinc-100 shrink-0">
+                <ProjectGallery images={project.images ?? (project.image ? [project.image] : [])} alt={project.title} />
                 {project.highlight && (
                   <span className="absolute top-3 left-3 z-10 rounded-full bg-rose-500 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white shadow">
                     Destaque
