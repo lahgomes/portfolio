@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #09090b;
 }
 
 @theme inline {
@@ -12,15 +12,43 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ── Scroll-reveal ────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-up.visible.delay-1 { transition-delay: 100ms; }
+.fade-up.visible.delay-2 { transition-delay: 200ms; }
+.fade-up.visible.delay-3 { transition-delay: 300ms; }
+.fade-up.visible.delay-4 { transition-delay: 400ms; }
+
+/* ── Hero load animations ─────────────────────── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-item {
+  opacity: 0;
+  animation: heroFadeUp 0.75s ease forwards;
+}
+.hero-item:nth-child(1) { animation-delay: 0ms; }
+.hero-item:nth-child(2) { animation-delay: 120ms; }
+.hero-item:nth-child(3) { animation-delay: 240ms; }
+.hero-item:nth-child(4) { animation-delay: 360ms; }
+.hero-item:nth-child(5) { animation-delay: 480ms; }
+.hero-item:nth-child(6) { animation-delay: 580ms; }
