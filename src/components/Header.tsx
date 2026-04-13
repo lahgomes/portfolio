@@ -58,7 +58,7 @@ export default function Header() {
           download
           className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-rose-200 bg-rose-50 px-4 py-1.5 text-xs font-semibold text-rose-600 hover:bg-rose-100 transition-colors"
         >
-          Baixar CV
+          Currículo
         </a>
 
         {/* Mobile toggle */}

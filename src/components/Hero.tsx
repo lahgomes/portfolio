@@ -1,4 +1,5 @@
-import { ArrowDown, Github, Linkedin } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 
 export default function Hero() {
   return (
@@ -6,11 +7,11 @@ export default function Hero() {
       {/* Soft background blobs */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -right-40 h-[600px] w-[600px] rounded-full bg-rose-100/50 blur-3xl"
+        className="pointer-events-none absolute -top-32 -right-40 h-150 w-150 rounded-full bg-rose-100/50 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 -left-40 h-[450px] w-[450px] rounded-full bg-pink-100/40 blur-3xl"
+        className="pointer-events-none absolute bottom-0 -left-40 h-112.5 w-112.5 rounded-full bg-pink-100/40 blur-3xl"
       />
 
       <div className="relative z-10 flex flex-col items-center gap-5">
@@ -23,7 +24,7 @@ export default function Hero() {
         {/* Name */}
         <h1 className="hero-item text-5xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl lg:text-7xl">
           Larissa{" "}
-          <span className="bg-gradient-to-r from-rose-500 to-pink-400 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-rose-500 to-pink-400 bg-clip-text text-transparent">
             Gomes
           </span>
         </h1>
@@ -59,23 +60,23 @@ export default function Hero() {
         {/* Social links */}
         <div className="hero-item flex items-center gap-4 pt-1 text-zinc-400">
           <a
-            href="https://github.com/larissagomes"
+            href="https://github.com/lahgomes"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
             className="hover:text-rose-500 transition-colors"
           >
-            <Github size={20} />
+            <GithubIcon size={20} />
           </a>
           <span className="h-4 w-px bg-zinc-200" />
           <a
-            href="https://linkedin.com/in/larissagomes"
+            href="https://www.linkedin.com/in/larissagomes19/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="hover:text-rose-500 transition-colors"
           >
-            <Linkedin size={20} />
+            <LinkedinIcon size={20} />
           </a>
         </div>
       </div>
