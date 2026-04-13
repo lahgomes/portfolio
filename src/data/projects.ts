@@ -2,19 +2,31 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  image?: string; // coloque em /public/projects/nome-do-arquivo.png
+  /** Coloque a imagem em /public/projects/nome.png */
+  image?: string;
   github?: string;
-  live?: string; // link da Vercel ou qualquer deploy
+  /** URL do deploy (Vercel, etc.) */
+  live?: string;
+  highlight?: boolean;
 }
 
 export const projects: Project[] = [
-  // Adicione seus projetos aqui! Exemplo:
+  {
+    title: "TMJ — Track My Jobs",
+    description:
+      "Aplicação fullstack para organizar candidaturas de emprego. Registre vagas, acompanhe etapas do processo seletivo, adicione anotações por candidatura e controle o status em tempo real. Dashboard com visão geral completa.",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
+    image: "/projects/tmj.png",
+    live: "https://tmj-project.vercel.app/",
+    highlight: true,
+  },
+  // Adicione seus próximos projetos aqui! Exemplo:
   // {
-  //   title: "Meu Projeto",
+  //   title: "Nome do Projeto",
   //   description: "Breve descrição do que o projeto faz e qual problema resolve.",
-  //   tags: ["React", "TypeScript", "Tailwind"],
-  //   image: "/projects/meu-projeto.png",
-  //   github: "https://github.com/larissagomes/meu-projeto",
-  //   live: "https://meu-projeto.vercel.app",
+  //   tags: ["React", "TypeScript"],
+  //   image: "/projects/nome.png",
+  //   github: "https://github.com/lahgomes/nome",
+  //   live: "https://nome.vercel.app",
   // },
 ];
