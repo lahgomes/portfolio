@@ -8,8 +8,8 @@ const SKILLS = [
     category: "Frontend",
     items: [
       "HTML5", "CSS3", "JavaScript", "TypeScript",
-      "React", "Next.js", "Tailwind CSS",
-      "Styled-Components", "SASS", "React Query", "React Hooks",
+      "React", "Next.js", "Tailwind CSS", "Vite",
+      "Styled-Components", "SASS", "React Query", "React Hooks", "Git","Jest", "React Testing Library",
     ],
   },
   {
@@ -20,15 +20,20 @@ const SKILLS = [
     ],
   },
   {
-    category: "Ferramentas",
+    category: "Ferramentas & Observabilidade",
     items: [
-      "Git & GitHub", "Figma", "Storybook", "Sentry",
-      "Jest", "GitHub Actions", "Docker", "Canva", "Scrum / Kanban",
+      "GitHub", "Figma", "Storybook", "Sentry", "GitHub Actions", "Docker", "CI/CD"
+    ],
+  },
+   {
+    category: "Metodologias Ágeis",
+    items: [
+      "Scrum", "Kanban"
     ],
   },
   {
     category: "Em evolução",
-    items: ["Python", "Node.js", "Flask", "PostgreSQL"],
+    items: ["Python", "Node.js", "Express", "Banco de Dados", "PostgreSQL"],
   },
 ];
 

@@ -6,8 +6,8 @@ import { useInView } from "@/hooks/useInView";
 
 const TAGS = [
   "React", "Next.js", "TypeScript", "Tailwind CSS",
-  "SEO Técnico", "Core Web Vitals", "Performance Web",
-  "UX Design", "Storybook", "Node.js (aprendendo)",
+  "SEO Técnico", "Core Web Vitals", "Performance Web", "Vite",
+  "UX Design", "Storybook", "Node.js", "React Testing Library", "Jest", "Styled-Components", "Git"
 ];
 
 function ProfilePhoto() {
@@ -26,6 +26,7 @@ function ProfilePhoto() {
       src="/profile.jpg"
       alt="Foto de Larissa Gomes"
       fill
+      sizes="(max-width: 640px) 288px, 320px"
       className="object-cover object-top"
       priority
       onError={() => setError(true)}
@@ -63,22 +64,25 @@ export default function About() {
             <p className="text-zinc-600 leading-relaxed">
               Desenvolvedora front-end com{" "}
               <strong className="text-zinc-800">4 anos de experiência</strong>{" "}
-              focada em React, Next.js, TypeScript, Tailwind, performance web e
-              SEO. Formada em{" "}
+              focada em React, Next.js, TypeScript, Tailwind CSS, performance web e
+              SEO. Sou formada em{" "}
               <strong className="text-zinc-800">Arquitetura e Urbanismo</strong>{" "}
-              pela UFOP — o que trouxe perspectiva criativa e senso estético
+              pela Universidade Federal de Ouro Preto, o que trouxe perspectiva criativa e senso estético
               para o meu trabalho no front-end.
             </p>
             <p className="text-zinc-600 leading-relaxed">
               Atualmente expandindo conhecimentos em backend com{" "}
               <strong className="text-zinc-800">Node.js</strong> e
               arquitetura de aplicações, com foco em evolução para Full Stack.
-              Cursando pós-graduação em{" "}
+              Também estou cursando pós-graduação em{" "}
               <strong className="text-zinc-800">
                 Inteligência Artificial e Ciência de Dados
               </strong>{" "}
               pela Anhembi Morumbi.
             </p>
+              <p className="text-zinc-600 leading-relaxed">
+                Sou uma profissional <strong className="text-zinc-800">proativa e dedicada</strong> que valoriza muito uma comunicação clara e colaboração em equipe.
+              </p>
 
             <div className="flex flex-wrap gap-2 pt-1">
               {TAGS.map((tag) => (
@@ -97,6 +101,11 @@ export default function About() {
                 download
                 className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-rose-200 hover:bg-rose-600 transition-colors"
               >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
                 Currículo
               </a>
               <a

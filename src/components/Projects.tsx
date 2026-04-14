@@ -32,6 +32,7 @@ function ProjectImages({ project }: { project: Project }) {
         src={list[current]}
         alt={`${project.title} — imagem ${current + 1}`}
         fill
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="object-cover object-top transition-opacity duration-300"
       />
       {list.length > 1 && (

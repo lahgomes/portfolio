@@ -104,7 +104,7 @@ export default function Hero() {
 
         <p className="hero-item max-w-lg text-zinc-500 leading-relaxed">
           4 anos de experiência construindo produtos web com React, Next.js e
-          TypeScript — com foco em performance, SEO técnico e experiências que
+          TypeScript com foco em performance, SEO técnico e experiências que
           encantam usuários.
         </p>
 
