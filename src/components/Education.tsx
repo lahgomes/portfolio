@@ -72,20 +72,20 @@ export default function Education() {
     <section
       id="educacao"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-8 px-5 sm:px-8 bg-white"
+      className="py-8 px-5 sm:px-8 bg-white dark:bg-zinc-900"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Educação" title="Formação & Cursos" />
 
-        <div className="mt-10 flex w-fit mx-auto gap-1 rounded-xl bg-zinc-100 p-1">
+        <div className="mt-10 flex w-fit mx-auto gap-1 rounded-xl bg-zinc-100 dark:bg-zinc-800 p-1">
           {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
                 activeTab === tab
-                  ? "bg-white shadow-sm text-zinc-900"
-                  : "text-zinc-500 hover:text-zinc-700"
+                  ? "bg-white dark:bg-zinc-700 shadow-sm text-zinc-900 dark:text-zinc-100"
+                  : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200"
               }`}
             >
               {tab}
@@ -99,17 +99,17 @@ export default function Education() {
           {items.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 hover:border-rose-200 hover:shadow-md transition-all"
+              className="flex flex-col gap-4 rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 p-6 hover:border-rose-200 hover:shadow-md transition-all"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 text-rose-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 dark:bg-rose-900/30 text-rose-500 dark:text-rose-400">
                 {item.icon}
               </div>
               <div>
                 <p className="text-xs font-semibold text-rose-500">{item.period}</p>
-                <h3 className="mt-1 text-sm font-bold text-zinc-900">{item.degree}</h3>
-                <p className="mt-0.5 text-xs text-zinc-400">{item.institution}</p>
+                <h3 className="mt-1 text-sm font-bold text-zinc-900 dark:text-zinc-100">{item.degree}</h3>
+                <p className="mt-0.5 text-xs text-zinc-400 dark:text-zinc-500">{item.institution}</p>
               </div>
-              <p className="text-sm leading-relaxed text-zinc-600 flex-1">
+              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 flex-1">
                 {item.description}
               </p>
             </div>

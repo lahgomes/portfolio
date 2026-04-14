@@ -36,13 +36,13 @@ export default function Contact() {
     <section
       id="contato"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-8 px-5 sm:px-8 bg-zinc-50"
+      className="py-8 px-5 sm:px-8 bg-zinc-50 dark:bg-zinc-950"
     >
       <div className="mx-auto max-w-3xl">
         <SectionHeading label="Contato" title="Vamos conversar?" />
 
         <p
-          className={`mt-5 text-center text-zinc-500 leading-relaxed max-w-lg mx-auto fade-up ${inView ? "visible" : ""}`}
+          className={`mt-5 text-center text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg mx-auto fade-up ${inView ? "visible" : ""}`}
         >
           Estou aberta a oportunidades, freelas e bate-papos sobre tecnologia.
           Escolha o canal que preferir e me manda mensagem!
@@ -57,26 +57,26 @@ export default function Contact() {
               href={link.href}
               target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="group flex flex-col gap-3 rounded-2xl border border-zinc-200 bg-white p-5 hover:border-rose-200 hover:shadow-md transition-all"
+              className="group flex flex-col gap-3 rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-5 hover:border-rose-200 hover:shadow-md transition-all"
             >
               <div className="flex items-center justify-between">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 text-rose-500 group-hover:bg-rose-500 group-hover:text-white transition-colors">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 dark:bg-rose-900/30 text-rose-500 dark:text-rose-400 group-hover:bg-rose-500 group-hover:text-white transition-colors">
                   {link.icon}
                 </div>
                 <ArrowUpRight
                   size={16}
-                  className="text-zinc-300 group-hover:text-rose-400 transition-colors"
+                  className="text-zinc-300 dark:text-zinc-600 group-hover:text-rose-400 transition-colors"
                 />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
                   {link.label}
                 </p>
-                <p className="mt-0.5 text-sm font-semibold text-zinc-800">
+                <p className="mt-0.5 text-sm font-semibold text-zinc-800 dark:text-zinc-100">
                   {link.value}
                 </p>
               </div>
-              <p className="text-xs text-zinc-500 leading-relaxed">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
                 {link.description}
               </p>
             </a>

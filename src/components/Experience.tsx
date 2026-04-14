@@ -48,7 +48,7 @@ export default function Experience() {
     <section
       id="experiencia"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-8 px-5 sm:px-8 bg-zinc-50"
+      className="py-8 px-5 sm:px-8 bg-zinc-50 dark:bg-zinc-950"
     >
       <div className="mx-auto max-w-3xl">
         <SectionHeading label="Experiência" title="Trajetória profissional" />
@@ -59,27 +59,27 @@ export default function Experience() {
           {EXPERIENCE.map((item, i) => (
             <div key={i} className="relative flex gap-5 pb-10 last:pb-0">
               <div className="flex flex-col items-center">
-                <div className="mt-1.5 h-3.5 w-3.5 shrink-0 rounded-full border-2 border-rose-400 bg-white" />
+                <div className="mt-1.5 h-3.5 w-3.5 shrink-0 rounded-full border-2 border-rose-400 bg-white dark:bg-zinc-900" />
                 {i < EXPERIENCE.length - 1 && (
-                  <div className="mt-1 w-px flex-1 bg-zinc-200" />
+                  <div className="mt-1 w-px flex-1 bg-zinc-200 dark:bg-zinc-700" />
                 )}
               </div>
 
-              <div className="w-full rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow mb-1">
+              <div className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 p-5 shadow-sm hover:shadow-md transition-shadow mb-1">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-base font-bold text-zinc-900">{item.role}</h3>
+                    <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">{item.role}</h3>
                     <p className="text-sm font-semibold text-rose-500">{item.company}</p>
                   </div>
                   <div className="text-right shrink-0">
-                    <p className="text-xs font-medium text-zinc-500">{item.period}</p>
-                    <p className="text-xs text-zinc-400">{item.location}</p>
+                    <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">{item.period}</p>
+                    <p className="text-xs text-zinc-400 dark:text-zinc-500">{item.location}</p>
                   </div>
                 </div>
 
                 <ul className="mt-3 flex flex-col gap-1.5">
                   {item.bullets.map((b, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-zinc-600">
+                    <li key={j} className="flex items-start gap-2 text-sm text-zinc-600 dark:text-zinc-300">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-300" />
                       {b}
                     </li>
@@ -90,7 +90,7 @@ export default function Experience() {
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md bg-rose-50 px-2 py-0.5 text-[11px] font-medium text-rose-600"
+                      className="rounded-md bg-rose-50 dark:bg-rose-900/20 px-2 py-0.5 text-[11px] font-medium text-rose-600 dark:text-rose-400"
                     >
                       {tag}
                     </span>

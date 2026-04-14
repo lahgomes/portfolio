@@ -44,7 +44,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-8 px-5 sm:px-8 bg-zinc-50"
+      className="py-8 px-5 sm:px-8 bg-zinc-50 dark:bg-zinc-950"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Skills" title="Tecnologias & Ferramentas" />
@@ -54,14 +54,14 @@ export default function Skills() {
         >
           {SKILLS.map((group) => (
             <div key={group.category}>
-              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-zinc-400">
+              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
                 {group.category}
               </p>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm font-medium text-zinc-600 shadow-sm hover:border-rose-200 hover:text-rose-500 transition-colors cursor-default"
+                    className="rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-4 py-1.5 text-sm font-medium text-zinc-600 dark:text-zinc-300 shadow-sm hover:border-rose-200 hover:text-rose-500 transition-colors cursor-default"
                   >
                     {item}
                   </span>
