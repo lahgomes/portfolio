@@ -59,20 +59,20 @@ const COURSES = [
   },
 ];
 
-const TABS = ["Formação", "Cursos & Certificados"] as const;
+const TABS = ["Formação Acadêmica", "Cursos & Certificados"] as const;
 type Tab = (typeof TABS)[number];
 
 export default function Education() {
   const { ref, inView } = useInView();
-  const [activeTab, setActiveTab] = useState<Tab>("Formação");
+  const [activeTab, setActiveTab] = useState<Tab>("Formação Acadêmica");
 
-  const items = activeTab === "Formação" ? FORMATION : COURSES;
+  const items = activeTab === "Formação Acadêmica" ? FORMATION : COURSES;
 
   return (
     <section
       id="educacao"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-5 sm:px-8 bg-white"
+      className="py-8 px-5 sm:px-8 bg-white"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Educação" title="Formação & Cursos" />

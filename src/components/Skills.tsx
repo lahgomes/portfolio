@@ -39,7 +39,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-5 sm:px-8 bg-zinc-50"
+      className="py-8 px-5 sm:px-8 bg-zinc-50"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Skills" title="Tecnologias & Ferramentas" />

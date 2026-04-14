@@ -40,7 +40,7 @@ export default function About() {
     <section
       id="sobre"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-5 sm:px-8 bg-white"
+      className="py-8 px-5 sm:px-8 bg-white"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Sobre mim" title="Prazer, sou a Larissa!" />
@@ -48,17 +48,17 @@ export default function About() {
         <div
           className={`mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-center fade-up ${inView ? "visible" : ""}`}
         >
-          {/* Photo */}
+
           <div className="flex justify-center md:justify-start">
             <div className="relative">
-              <div className="absolute -inset-3 rounded-3xl bg-linear-to-br from-rose-200 via-pink-100 to-rose-50 -z-10" />
-              <div className="relative h-72 w-72 overflow-hidden rounded-2xl sm:h-80 sm:w-80">
+              <div className="absolute -inset-3 rounded-full bg-linear-to-br from-rose-200 via-pink-100 to-rose-50 -z-10" />
+              <div className="relative h-72 w-72 overflow-hidden rounded-full sm:h-80 sm:w-80">
                 <ProfilePhoto />
               </div>
             </div>
           </div>
 
-          {/* Text */}
+
           <div className="flex flex-col gap-5">
             <p className="text-zinc-600 leading-relaxed">
               Desenvolvedora front-end com{" "}

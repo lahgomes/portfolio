@@ -29,7 +29,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-8 sm:px-8">
         <a
           href="#"
           className="text-base font-bold tracking-tight text-zinc-900 hover:text-rose-500 transition-colors"

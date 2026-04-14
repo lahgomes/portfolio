@@ -36,7 +36,7 @@ export default function Contact() {
     <section
       id="contato"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-5 sm:px-8 bg-zinc-50"
+      className="py-8 px-5 sm:px-8 bg-zinc-50"
     >
       <div className="mx-auto max-w-3xl">
         <SectionHeading label="Contato" title="Vamos conversar?" />

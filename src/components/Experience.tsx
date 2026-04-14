@@ -19,11 +19,11 @@ const EXPERIENCE: ExperienceItem[] = [
     period: "Mar 2022 — Fev 2026",
     location: "Remoto",
     bullets: [
-      "Evolução de produto e features do marketplace de promoções, do front ao deploy",
-      "Otimização de Core Web Vitals e SEO técnico com SEMrush e Google Search Console",
-      "Manutenção e evolução do Design System via Storybook, em parceria com UX",
-      "Monitoramento proativo de erros e performance com Sentry",
-      "Projeto interno 'Pricer': scraping de preços em Python com Flask, Selenium e Docker",
+      "Evolução de Produto: desenvolvimento e otimização de funcionalidades na plataforma web, melhoria de arquitetura de componentes, UX e validação via testes A/B orientados a métricas.",
+      "Performance e SEO: implementação de estratégias de Core Web Vitals e SEO técnico com SemRush e Google Search Console para melhorar o ranqueamento orgânico.",
+      "Design System: desenvolvimento e manutenção do Design System da empresa via Storybook, garantindo consistência visual entre times de UI/UX e engenharia.",
+      "Monitoramento e observabilidade: gestão de bugs e observabilidade em tempo real com Sentry, reduzindo o tempo de resposta a incidentes.",
+      "Projeto interno 'Pricer': desenvolvimento em Python para scraping de lojas e validação de ofertas, com arquitetura modular (crawlers, serviços e rede), Web API em Flask, Selenium, proxies Webshare e monitoramento com Sentry.",
     ],
     tags: ["Next.js", "Tailwind CSS", "React Query", "TypeScript", "Storybook", "Sentry", "Python", "Docker"],
   },
@@ -48,7 +48,7 @@ export default function Experience() {
     <section
       id="experiencia"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-5 sm:px-8 bg-zinc-50"
+      className="py-8 px-5 sm:px-8 bg-zinc-50"
     >
       <div className="mx-auto max-w-3xl">
         <SectionHeading label="Experiência" title="Trajetória profissional" />

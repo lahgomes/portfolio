@@ -73,7 +73,7 @@ export default function Projects() {
 
   if (total === 0) {
     return (
-      <section id="projetos" className="py-24 px-5 sm:px-8 bg-white">
+      <section id="projetos" className="py-8 px-5 sm:px-8 bg-white">
         <div className="mx-auto max-w-5xl">
           <SectionHeading label="Projetos" title="O que eu construí" />
           <p className="mt-8 text-center text-zinc-400 text-sm">
@@ -95,34 +95,22 @@ export default function Projects() {
     <section
       id="projetos"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 px-5 sm:px-8 bg-white"
+      className="py-8 px-5 sm:px-8 bg-white"
     >
       <div className="mx-auto max-w-5xl">
-        <div className="flex items-end justify-between mb-10">
-          <SectionHeading label="Projetos" title="O que eu construí" />
-          {total > 1 && (
-            <span className="text-sm font-mono text-zinc-400 pb-1 shrink-0">
-              {String(active + 1).padStart(2, "0")}{" "}
-              <span className="text-zinc-200">/</span>{" "}
-              {String(total).padStart(2, "0")}
-            </span>
-          )}
+        <div className="flex justify-center items-center  mb-10">
+          <SectionHeading label="Projetos" title="O que já construí" />
+
         </div>
 
         <div className={`fade-up ${inView ? "visible" : ""}`}>
           <div
-            className={`overflow-hidden rounded-2xl border bg-zinc-50 ${
-              project.highlight ? "border-rose-200 shadow-md shadow-rose-100/60" : "border-zinc-200 shadow-sm"
-            }`}
+            className="overflow-hidden rounded-2xl border bg-zinc-50"
           >
             <div className="flex flex-col md:flex-row">
               <div className="relative h-60 w-full shrink-0 overflow-hidden md:h-auto md:w-1/2">
                 <ProjectImages project={project} />
-                {project.highlight && (
-                  <span className="absolute top-3 left-3 z-10 rounded-full bg-rose-500 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white shadow">
-                    Destaque
-                  </span>
-                )}
+
               </div>
 
               <div className="flex flex-1 flex-col justify-between gap-5 p-6 md:p-8">
@@ -161,7 +149,7 @@ export default function Projects() {
                       className="inline-flex items-center gap-1.5 text-sm font-semibold text-rose-500 hover:text-rose-600 transition-colors"
                     >
                       <ExternalLink size={15} />
-                      Ver ao vivo
+                      Ver projeto
                     </a>
                   )}
                 </div>
