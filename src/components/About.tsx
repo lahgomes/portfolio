@@ -6,8 +6,8 @@ import { useInView } from "@/hooks/useInView";
 
 const TAGS = [
   "React", "Next.js", "TypeScript", "Tailwind CSS",
-  "SEO Técnico", "Core Web Vitals", "Performance Web", "Vite",
-  "UX Design", "Storybook", "Node.js", "React Testing Library", "Jest", "Styled-Components", "Git"
+  "SEO Técnico", "Core Web Vitals", "Performance Web", "Vite", "SSR",
+  "UX Design", "Storybook", "React Testing Library", "Jest", "Styled-Components"
 ];
 
 function ProfilePhoto() {

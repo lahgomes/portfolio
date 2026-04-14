@@ -9,7 +9,7 @@ const SKILLS = [
     items: [
       "HTML5", "CSS3", "JavaScript", "TypeScript",
       "React", "Next.js", "Tailwind CSS", "Vite",
-      "Styled-Components", "SASS", "React Query", "React Hooks", "Git","Jest", "React Testing Library",
+      "Styled-Components", "SASS", "React Query", "React Hooks", "Git","Jest", "React Testing Library", "Server-Side Rendering (SSR)", "API REST"
     ],
   },
   {
