@@ -18,7 +18,7 @@ Além disso, para me aprofundar nos estudos, também estou cursando uma pós gra
 Valorizo comunicação clara, colaboração entre áreas e melhoria contínua. Busco contribuir em times que priorizem qualidade de código, performance e visão de produto, agregando tanto na entrega técnica quanto na evolução do produto.
 
 
-**[Acessar Portfolio ](https://lahgomes.github.io/portfolio)**
+**[Acessar Portfolio ](https://larissa-gomes-dev.vercel.app/)**
 
 
 
@@ -42,6 +42,13 @@ Valorizo comunicação clara, colaboração entre áreas e melhoria contínua. B
 - **Animações:** CSS puro via IntersectionObserver
 - **Imagens:** next/image com otimização automática
 - **Deploy:** Vercel
+
+## Imagens 
+
+<img width="1410" height="900" alt="portfolio1" src="https://github.com/user-attachments/assets/18122de1-c186-462e-99b4-f52a39248ade" />
+<img width="1202" height="826" alt="portfolio3" src="https://github.com/user-attachments/assets/026f19a0-d6e0-4afa-81b8-54dc899c3ddb" />
+<img width="1176" height="906" alt="portfolio2" src="https://github.com/user-attachments/assets/c7b30b6d-0540-4b92-af7b-0e9dd083af1c" />
+<img width="1200" height="902" alt="portfolio4" src="https://github.com/user-attachments/assets/3def7f54-0549-46be-9ae6-f21ec751890a" />
 
 
 
