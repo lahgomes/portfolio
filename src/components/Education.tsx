@@ -40,7 +40,7 @@ const COURSES = [
     institution: "Origamid",
     period: "2026",
     description:
-      "Backend com Node, criação de APIs que repondem a JSON, Rotas, Autenticação, Middlewares e Streams",
+      "Backend com Node, criação de APIs que respondem a JSON, rotas, autenticação, middlewares e streams.",
   },
   {
     icon: <BookOpen size={20} />,
