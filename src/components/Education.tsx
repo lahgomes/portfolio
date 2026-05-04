@@ -52,7 +52,7 @@ const COURSES = [
   },
     {
     icon: <BookOpen size={20} />,
-    degree: "JavaScript ES6 ",
+    degree: "JavaScript ES6",
     institution: "Origamid",
     period: "2022",
     description:
