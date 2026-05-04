@@ -32,7 +32,7 @@ const COURSES = [
     institution: "Anthropic",
     period: "2026",
     description:
-      "Desenvolvimento de aplicações com Claude Code,",
+      "Desenvolvimento de aplicações com Claude Code e integração de fluxos de desenvolvimento assistidos por IA.",
   },
   {
     icon: <BookOpen size={20} />,
