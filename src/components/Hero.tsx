@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { ArrowDown } from "lucide-react";
+import { twJoin } from "tailwind-merge";
 import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 
 function AnimatedName() {
@@ -37,9 +38,10 @@ function AnimatedName() {
         ) : (
           <span
             key={i}
-            className={`transition-colors duration-150 ${
+            className={twJoin(
+              "transition-colors duration-150",
               colored ? "text-rose-500" : "text-zinc-900 dark:text-zinc-100"
-            }`}
+            )}
           >
             {letter}
           </span>
@@ -74,9 +76,10 @@ function Typewriter({ text, delay = 0 }: { text: string; delay?: number }) {
     <span>
       {displayed}
       <span
-        className={`inline-block w-0.5 h-[0.85em] bg-rose-400 ml-0.5 align-middle ${
-          done ? "animate-pulse" : ""
-        }`}
+        className={twJoin(
+          "inline-block w-0.5 h-[0.85em] bg-rose-400 ml-0.5 align-middle",
+          done && "animate-pulse"
+        )}
       />
     </span>
   );

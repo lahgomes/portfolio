@@ -2,6 +2,7 @@
 
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
+import { twJoin } from "tailwind-merge";
 
 const SKILLS = [
   {
@@ -50,7 +51,7 @@ export default function Skills() {
         <SectionHeading label="Skills" title="Tecnologias & Ferramentas" />
 
         <div
-          className={`mt-12 flex flex-col gap-8 fade-up ${inView ? "visible" : ""}`}
+          className={twJoin("mt-12 flex flex-col gap-8 fade-up", inView && "visible")}
         >
           {SKILLS.map((group) => (
             <div key={group.category}>

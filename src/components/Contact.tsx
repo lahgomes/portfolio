@@ -4,6 +4,7 @@ import { Mail, ArrowUpRight } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
+import { twJoin } from "tailwind-merge";
 
 const LINKS = [
   {
@@ -42,14 +43,14 @@ export default function Contact() {
         <SectionHeading label="Contato" title="Vamos conversar?" />
 
         <p
-          className={`mt-5 text-center text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg mx-auto fade-up ${inView ? "visible" : ""}`}
+          className={twJoin("mt-5 text-center text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg mx-auto fade-up", inView && "visible")}
         >
           Estou aberta a oportunidades, freelas e bate-papos sobre tecnologia.
           Escolha o canal que preferir e me manda mensagem!
         </p>
 
         <div
-          className={`mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 fade-up ${inView ? "visible delay-1" : ""}`}
+          className={twJoin("mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 fade-up", inView && "visible delay-1")}
         >
           {LINKS.map((link) => (
             <a

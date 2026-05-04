@@ -4,13 +4,14 @@ import { GraduationCap, BookOpen } from "lucide-react";
 import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
+import { twJoin } from "tailwind-merge";
 
 const FORMATION = [
   {
     icon: <GraduationCap size={20} />,
     degree: "Pós-Graduação em IA e Ciência de Dados",
     institution: "Universidade Anhembi Morumbi — SP",
-    period: "2025 — 2027 (cursando)",
+    period: "2026 — 2027 (cursando)",
     description:
       "Especialização em inteligência artificial, machine learning e análise de dados, com aplicação prática em projetos reais.",
   },
@@ -29,25 +30,41 @@ const COURSES = [
     icon: <BookOpen size={20} />,
     degree: "Claude Code in Action",
     institution: "Anthropic",
-    period: "2025",
+    period: "2026",
     description:
-      "Desenvolvimento de aplicações com IA generativa e uso de ferramentas de agentes com Claude.",
+      "Desenvolvimento de aplicações com Claude Code,",
   },
   {
     icon: <BookOpen size={20} />,
-    degree: "Node.js, JS ES6 e CSS Flexbox",
+    degree: "Backend com Node.js",
     institution: "Origamid",
-    period: "2022 — 2023",
+    period: "2026",
     description:
-      "Fundamentos modernos de JavaScript, Node.js e layout responsivo com CSS Flexbox.",
+      "Backend com Node, criação de APIs que repondem a JSON, Rotas, Autenticação, Middlewares e Streams",
   },
   {
     icon: <BookOpen size={20} />,
     degree: "Imersão Front-end",
     institution: "Alura",
+    period: "2024",
+    description:
+      "Intensivo de front-end com React, boas práticas de desenvolvimento web e criação de um chat de conversas ao vivo com Supabase.",
+  },
+    {
+    icon: <BookOpen size={20} />,
+    degree: "JavaScript ES6 ",
+    institution: "Origamid",
     period: "2022",
     description:
-      "Intensivo de front-end com HTML, CSS, JavaScript e boas práticas de desenvolvimento web.",
+      "Fundamentos modernos de JavaScript, Node.js e layout responsivo com CSS Flexbox.",
+  },
+   {
+    icon: <BookOpen size={20} />,
+    degree: "CSS Flexbox",
+    institution: "Origamid",
+    period: "2021",
+    description:
+      "Fundamentos do CSS e layout responsivo com CSS Flexbox.",
   },
   {
     icon: <BookOpen size={20} />,
@@ -82,11 +99,12 @@ export default function Education() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+              className={twJoin(
+                "rounded-lg px-4 py-2 text-sm font-medium transition-all",
                 activeTab === tab
                   ? "bg-white dark:bg-zinc-700 shadow-sm text-zinc-900 dark:text-zinc-100"
                   : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200"
-              }`}
+              )}
             >
               {tab}
             </button>
@@ -94,7 +112,7 @@ export default function Education() {
         </div>
 
         <div
-          className={`mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 fade-up ${inView ? "visible" : ""}`}
+          className={twJoin("mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 fade-up", inView && "visible")}
         >
           {items.map((item, i) => (
             <div

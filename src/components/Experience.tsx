@@ -2,6 +2,7 @@
 
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
+import { twJoin } from "tailwind-merge";
 
 interface ExperienceItem {
   role: string;
@@ -23,7 +24,7 @@ const EXPERIENCE: ExperienceItem[] = [
       "Performance e SEO: implementação de estratégias de Core Web Vitals e SEO técnico com SemRush e Google Search Console para melhorar o ranqueamento orgânico.",
       "Design System: desenvolvimento e manutenção do Design System da empresa via Storybook, garantindo consistência visual entre times de UI/UX e engenharia.",
       "Monitoramento e observabilidade: gestão de bugs e observabilidade em tempo real com Sentry, reduzindo o tempo de resposta a incidentes.",
-      "Projeto interno 'Pricer': desenvolvimento em Python para scraping de lojas e validação de ofertas, com arquitetura modular (crawlers, serviços e rede), Web API em Flask, Selenium, proxies Webshare e monitoramento com Sentry.",
+      "Projeto interno 'Pricer': desenvolvimento em Python de web scraping de lojas e validação de ofertas, com arquitetura modular (crawlers, serviços e rede), Web API em Flask, Selenium, proxies Webshare e monitoramento com Sentry.",
     ],
     tags: ["Next.js", "Tailwind CSS", "React Query", "TypeScript", "Storybook", "Sentry", "Python", "Docker"],
   },
@@ -54,7 +55,7 @@ export default function Experience() {
         <SectionHeading label="Experiência" title="Trajetória profissional" />
 
         <div
-          className={`mt-12 flex flex-col gap-0 fade-up ${inView ? "visible" : ""}`}
+          className={twJoin("mt-12 flex flex-col gap-0 fade-up", inView && "visible")}
         >
           {EXPERIENCE.map((item, i) => (
             <div key={i} className="relative flex gap-5 pb-10 last:pb-0">

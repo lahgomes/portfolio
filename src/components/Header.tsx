@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { twJoin } from "tailwind-merge";
+import { useTheme } from "@/context/ThemeContext";
 
 const NAV_LINKS = [
   { label: "Sobre", href: "#sobre" },
@@ -12,6 +14,7 @@ const NAV_LINKS = [
 ];
 
 export default function Header() {
+  const { toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -21,18 +24,14 @@ export default function Header() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  function toggleTheme() {
-    const isDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  }
-
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={twJoin(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg border-b border-rose-100/60 dark:border-zinc-700/60 shadow-sm shadow-rose-100/20"
           : "bg-transparent"
-      }`}
+      )}
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-8 sm:px-8">
         <a

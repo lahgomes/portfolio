@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
+import { twJoin } from "tailwind-merge";
 
 const TAGS = [
   "React", "Next.js", "TypeScript", "Tailwind CSS",
@@ -47,7 +48,7 @@ export default function About() {
         <SectionHeading label="Sobre mim" title="Prazer, sou a Larissa!" />
 
         <div
-          className={`mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-center fade-up ${inView ? "visible" : ""}`}
+          className={twJoin("mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-center fade-up", inView && "visible")}
         >
 
           <div className="flex justify-center md:justify-start">

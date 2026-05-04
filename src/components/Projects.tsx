@@ -8,6 +8,7 @@ import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
 import { projects } from "@/data/projects";
 import type { Project } from "@/data/projects";
+import { twJoin } from "tailwind-merge";
 
 function ProjectImages({ project }: { project: Project }) {
   const [current, setCurrent] = useState(0);
@@ -57,7 +58,7 @@ function ProjectImages({ project }: { project: Project }) {
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
                 aria-label={`Imagem ${i + 1}`}
-                className={`h-1.5 rounded-full transition-all ${i === current ? "w-4 bg-white" : "w-1.5 bg-white/60"}`}
+                className={twJoin("h-1.5 rounded-full transition-all", i === current ? "w-4 bg-white" : "w-1.5 bg-white/60")}
               />
             ))}
           </div>
@@ -104,7 +105,7 @@ export default function Projects() {
 
         </div>
 
-        <div className={`fade-up ${inView ? "visible" : ""}`}>
+        <div className={twJoin("fade-up", inView && "visible")}>
           <div
             className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800"
           >
@@ -174,11 +175,12 @@ export default function Projects() {
                     key={i}
                     onClick={() => setActive(i)}
                     aria-label={`Projeto ${i + 1}`}
-                    className={`rounded-full transition-all duration-300 ${
+                    className={twJoin(
+                      "rounded-full transition-all duration-300",
                       i === active
                         ? "w-6 h-2.5 bg-rose-500"
                         : "w-2.5 h-2.5 bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600"
-                    }`}
+                    )}
                   />
                 ))}
               </div>
