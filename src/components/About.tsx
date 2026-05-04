@@ -7,8 +7,8 @@ import { twJoin } from "tailwind-merge";
 
 const TAGS = [
   "React", "Next.js", "TypeScript", "Tailwind CSS",
-  "SEO Técnico", "Core Web Vitals", "Performance Web", "Vite", "SSR",
-  "UX Design", "Storybook", "React Testing Library", "Jest", "Styled-Components"
+  "SEO Técnico", "Core Web Vitals", "Performance Web", "SSR",
+  "Design System", "Styled-Components", "Node.js", "Python"
 ];
 
 function ProfilePhoto() {
@@ -63,26 +63,27 @@ export default function About() {
 
           <div className="flex flex-col gap-5">
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-              Desenvolvedora front-end com{" "}
-              focada em React, Next.js, TypeScript, Tailwind CSS, performance web e
-              SEO. Sou formada em{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Arquitetura e Urbanismo</strong>{" "}
-              pela Universidade Federal de Ouro Preto, o que trouxe perspectiva criativa e senso estético
-              para o meu trabalho no front-end.
+              Sou desenvolvedora front-end com 4 anos de experiência em{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">React, Next.js e TypeScript</strong>,
+              construindo produtos web com foco em performance, SEO técnico e experiência do usuário.
             </p>
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-              Atualmente expandindo conhecimentos em backend com{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Node.js</strong> e
-              arquitetura de aplicações, com foco em evolução para Full Stack.
-              Também estou cursando pós-graduação em{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">
-                Inteligência Artificial e Ciência de Dados
-              </strong>{" "}
-              pela Anhembi Morumbi.
+              Já atuei na evolução de produtos e arquitetura de componentes,
+              implementei estratégias de{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Core Web Vitals</strong>{" "}
+              que melhoraram a performance do site e também já construi um {" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Design System</strong>{" "}
+
             </p>
-              <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Sou uma profissional <strong className="text-zinc-800 dark:text-zinc-100">proativa e dedicada</strong> que valoriza muito uma comunicação clara e colaboração em equipe.
-              </p>
+
+            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+              Atualmente, estou expandindo meus conhecimentos como desenvolvedora <strong className="text-zinc-800 dark:text-zinc-100">Full Stack</strong> com{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Banco de Dados e Python</strong>. </p>
+              <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed"> Além disso, estou me especializando
+              cursando uma pós-graduação em{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Inteligência Artificial e Ciência de Dados</strong>{" "} </p>
+
+
 
             <div className="flex flex-wrap gap-2 pt-1">
               {TAGS.map((tag) => (

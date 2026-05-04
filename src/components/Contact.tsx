@@ -12,7 +12,7 @@ const LINKS = [
     label: "E-mail",
     value: "lahgomes19@gmail.com",
     href: "mailto:lahgomes19@gmail.com",
-    description: "Meu e-mail direto — respondo normalmente em até 24h.",
+    description: "Meu e-mail direto",
   },
   {
     icon: <LinkedinIcon size={20} />,
