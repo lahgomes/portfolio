@@ -4,13 +4,14 @@ import { GraduationCap, BookOpen } from "lucide-react";
 import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
+import { twJoin } from "tailwind-merge";
 
 const FORMATION = [
   {
     icon: <GraduationCap size={20} />,
     degree: "Pós-Graduação em IA e Ciência de Dados",
     institution: "Universidade Anhembi Morumbi — SP",
-    period: "2025 — 2027 (cursando)",
+    period: "2026 — 2027 (cursando)",
     description:
       "Especialização em inteligência artificial, machine learning e análise de dados, com aplicação prática em projetos reais.",
   },
@@ -29,25 +30,41 @@ const COURSES = [
     icon: <BookOpen size={20} />,
     degree: "Claude Code in Action",
     institution: "Anthropic",
-    period: "2025",
+    period: "2026",
     description:
-      "Desenvolvimento de aplicações com IA generativa e uso de ferramentas de agentes com Claude.",
+      "Desenvolvimento de aplicações com Claude Code e integração de fluxos de desenvolvimento assistidos por IA.",
   },
   {
     icon: <BookOpen size={20} />,
-    degree: "Node.js, JS ES6 e CSS Flexbox",
+    degree: "Backend com Node.js",
     institution: "Origamid",
-    period: "2022 — 2023",
+    period: "2026",
     description:
-      "Fundamentos modernos de JavaScript, Node.js e layout responsivo com CSS Flexbox.",
+      "Backend com Node, criação de APIs que respondem a JSON, rotas, autenticação, middlewares e streams.",
   },
   {
     icon: <BookOpen size={20} />,
     degree: "Imersão Front-end",
     institution: "Alura",
+    period: "2024",
+    description:
+      "Intensivo de front-end com React, boas práticas de desenvolvimento web e criação de um chat de conversas ao vivo com Supabase.",
+  },
+    {
+    icon: <BookOpen size={20} />,
+    degree: "JavaScript ES6",
+    institution: "Origamid",
     period: "2022",
     description:
-      "Intensivo de front-end com HTML, CSS, JavaScript e boas práticas de desenvolvimento web.",
+      "Fundamentos modernos de JavaScript, Node.js e layout responsivo com CSS Flexbox.",
+  },
+   {
+    icon: <BookOpen size={20} />,
+    degree: "CSS Flexbox",
+    institution: "Origamid",
+    period: "2021",
+    description:
+      "Fundamentos do CSS e layout responsivo com CSS Flexbox.",
   },
   {
     icon: <BookOpen size={20} />,
@@ -72,21 +89,22 @@ export default function Education() {
     <section
       id="educacao"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-8 px-5 sm:px-8 bg-white"
+      className="py-8 px-5 sm:px-8 bg-white dark:bg-zinc-900"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Educação" title="Formação & Cursos" />
 
-        <div className="mt-10 flex w-fit mx-auto gap-1 rounded-xl bg-zinc-100 p-1">
+        <div className="mt-10 flex w-fit mx-auto gap-1 rounded-xl bg-zinc-100 dark:bg-zinc-800 p-1">
           {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+              className={twJoin(
+                "rounded-lg px-4 py-2 text-sm font-medium transition-all",
                 activeTab === tab
-                  ? "bg-white shadow-sm text-zinc-900"
-                  : "text-zinc-500 hover:text-zinc-700"
-              }`}
+                  ? "bg-white dark:bg-zinc-700 shadow-sm text-zinc-900 dark:text-zinc-100"
+                  : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200"
+              )}
             >
               {tab}
             </button>
@@ -94,22 +112,22 @@ export default function Education() {
         </div>
 
         <div
-          className={`mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 fade-up ${inView ? "visible" : ""}`}
+          className={twJoin("mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 fade-up", inView && "visible")}
         >
           {items.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 hover:border-rose-200 hover:shadow-md transition-all"
+              className="flex flex-col gap-4 rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 p-6 hover:border-rose-200 hover:shadow-md transition-all"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 text-rose-500">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 dark:bg-rose-900/30 text-rose-500 dark:text-rose-400">
                 {item.icon}
               </div>
               <div>
                 <p className="text-xs font-semibold text-rose-500">{item.period}</p>
-                <h3 className="mt-1 text-sm font-bold text-zinc-900">{item.degree}</h3>
-                <p className="mt-0.5 text-xs text-zinc-400">{item.institution}</p>
+                <h3 className="mt-1 text-sm font-bold text-zinc-900 dark:text-zinc-100">{item.degree}</h3>
+                <p className="mt-0.5 text-xs text-zinc-400 dark:text-zinc-500">{item.institution}</p>
               </div>
-              <p className="text-sm leading-relaxed text-zinc-600 flex-1">
+              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 flex-1">
                 {item.description}
               </p>
             </div>

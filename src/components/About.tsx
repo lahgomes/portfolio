@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
+import { twJoin } from "tailwind-merge";
 
 const TAGS = [
   "React", "Next.js", "TypeScript", "Tailwind CSS",
-  "SEO Técnico", "Core Web Vitals", "Performance Web", "Vite", "SSR",
-  "UX Design", "Storybook", "React Testing Library", "Jest", "Styled-Components"
+  "SEO Técnico", "Core Web Vitals", "Performance Web", "SSR",
+  "Design System", "Styled-Components", "Node.js", "Python"
 ];
 
 function ProfilePhoto() {
@@ -27,7 +28,7 @@ function ProfilePhoto() {
       alt="Foto de Larissa Gomes"
       fill
       sizes="(max-width: 640px) 288px, 320px"
-      className="object-cover object-top"
+      className="object-cover object-center"
       priority
       onError={() => setError(true)}
     />
@@ -41,18 +42,18 @@ export default function About() {
     <section
       id="sobre"
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-8 px-5 sm:px-8 bg-white"
+      className="py-8 px-5 sm:px-8 bg-white dark:bg-zinc-900"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Sobre mim" title="Prazer, sou a Larissa!" />
 
         <div
-          className={`mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-center fade-up ${inView ? "visible" : ""}`}
+          className={twJoin("mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-center fade-up", inView && "visible")}
         >
 
           <div className="flex justify-center md:justify-start">
             <div className="relative">
-              <div className="absolute -inset-3 rounded-full bg-linear-to-br from-rose-200 via-pink-100 to-rose-50 -z-10" />
+              <div className="absolute -inset-3 rounded-full bg-linear-to-br from-rose-200 via-pink-100 to-rose-50 dark:from-rose-900/40 dark:via-pink-900/20 dark:to-zinc-800 -z-10" />
               <div className="relative h-72 w-72 overflow-hidden rounded-full sm:h-80 sm:w-80">
                 <ProfilePhoto />
               </div>
@@ -61,34 +62,34 @@ export default function About() {
 
 
           <div className="flex flex-col gap-5">
-            <p className="text-zinc-600 leading-relaxed">
-              Desenvolvedora front-end com{" "}
-              <strong className="text-zinc-800">4 anos de experiência</strong>{" "}
-              focada em React, Next.js, TypeScript, Tailwind CSS, performance web e
-              SEO. Sou formada em{" "}
-              <strong className="text-zinc-800">Arquitetura e Urbanismo</strong>{" "}
-              pela Universidade Federal de Ouro Preto, o que trouxe perspectiva criativa e senso estético
-              para o meu trabalho no front-end.
+            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+              Sou desenvolvedora front-end com 4 anos de experiência em{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">React, Next.js e TypeScript</strong>,
+              construindo produtos web com foco em performance, SEO técnico e experiência do usuário.
             </p>
-            <p className="text-zinc-600 leading-relaxed">
-              Atualmente expandindo conhecimentos em backend com{" "}
-              <strong className="text-zinc-800">Node.js</strong> e
-              arquitetura de aplicações, com foco em evolução para Full Stack.
-              Também estou cursando pós-graduação em{" "}
-              <strong className="text-zinc-800">
-                Inteligência Artificial e Ciência de Dados
-              </strong>{" "}
-              pela Anhembi Morumbi.
+            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+              Já atuei na evolução de produtos e arquitetura de componentes,
+              implementei estratégias de{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Core Web Vitals</strong>{" "}
+              que melhoraram a performance do site e também já construi um {" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Design System</strong>{" "}
+
             </p>
-              <p className="text-zinc-600 leading-relaxed">
-                Sou uma profissional <strong className="text-zinc-800">proativa e dedicada</strong> que valoriza muito uma comunicação clara e colaboração em equipe.
-              </p>
+
+            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
+              Atualmente, estou expandindo meus conhecimentos como desenvolvedora <strong className="text-zinc-800 dark:text-zinc-100">Full Stack</strong> com{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Banco de Dados e Python</strong>. </p>
+              <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed"> Além disso, estou me especializando
+              cursando uma pós-graduação em{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Inteligência Artificial e Ciência de Dados</strong>{" "} </p>
+
+
 
             <div className="flex flex-wrap gap-2 pt-1">
               {TAGS.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-rose-100 bg-rose-50 px-3 py-1 text-xs font-medium text-rose-600"
+                  className="rounded-full border border-rose-100 dark:border-rose-900/50 bg-rose-50 dark:bg-rose-900/20 px-3 py-1 text-xs font-medium text-rose-600 dark:text-rose-400"
                 >
                   {tag}
                 </span>
@@ -110,7 +111,7 @@ export default function About() {
               </a>
               <a
                 href="#contato"
-                className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-700 hover:border-rose-200 hover:text-rose-500 transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-5 py-2.5 text-sm font-semibold text-zinc-700 dark:text-zinc-200 hover:border-rose-200 hover:text-rose-500 transition-colors"
               >
                 Entrar em contato
               </a>
@@ -134,7 +135,7 @@ export function SectionHeading({
       <span className="text-xs font-bold uppercase tracking-widest text-rose-500">
         {label}
       </span>
-      <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
+      <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">
         {title}
       </h2>
       <div className="mt-1 h-1 w-10 rounded-full bg-linear-to-r from-rose-400 to-pink-300" />

@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { ArrowDown } from "lucide-react";
+import { twJoin } from "tailwind-merge";
 import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 
 function AnimatedName() {
@@ -37,9 +38,10 @@ function AnimatedName() {
         ) : (
           <span
             key={i}
-            className={`transition-colors duration-150 ${
-              colored ? "text-rose-500" : "text-zinc-900"
-            }`}
+            className={twJoin(
+              "transition-colors duration-150",
+              colored ? "text-rose-500" : "text-zinc-900 dark:text-zinc-100"
+            )}
           >
             {letter}
           </span>
@@ -74,9 +76,10 @@ function Typewriter({ text, delay = 0 }: { text: string; delay?: number }) {
     <span>
       {displayed}
       <span
-        className={`inline-block w-0.5 h-[0.85em] bg-rose-400 ml-0.5 align-middle ${
-          done ? "animate-pulse" : ""
-        }`}
+        className={twJoin(
+          "inline-block w-0.5 h-[0.85em] bg-rose-400 ml-0.5 align-middle",
+          done && "animate-pulse"
+        )}
       />
     </span>
   );
@@ -84,25 +87,25 @@ function Typewriter({ text, delay = 0 }: { text: string; delay?: number }) {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pt-20 text-center sm:px-8">
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pt-20 text-center sm:px-8 bg-white dark:bg-zinc-900">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -right-40 h-150 w-150 rounded-full bg-rose-100/50 blur-3xl"
+        className="pointer-events-none absolute -top-32 -right-40 h-150 w-150 rounded-full bg-rose-100/50 dark:bg-rose-900/20 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 -left-40 h-112.5 w-112.5 rounded-full bg-pink-100/40 blur-3xl"
+        className="pointer-events-none absolute bottom-0 -left-40 h-112.5 w-112.5 rounded-full bg-pink-100/40 dark:bg-pink-900/20 blur-3xl"
       />
 
       <div className="relative z-10 flex flex-col items-center gap-5">
 
         <AnimatedName />
 
-        <p className="hero-item text-lg font-medium text-zinc-500 sm:text-xl">
+        <p className="hero-item text-lg font-medium text-zinc-500 dark:text-zinc-400 sm:text-xl">
           <Typewriter text="Desenvolvedora Front-end" delay={900} />
         </p>
 
-        <p className="hero-item max-w-lg text-zinc-500 leading-relaxed">
+        <p className="hero-item max-w-lg text-zinc-500 dark:text-zinc-400 leading-relaxed">
           4 anos de experiência construindo produtos web com React, Next.js e
           TypeScript com foco em performance, SEO técnico e experiências que
           encantam usuários.
@@ -117,7 +120,7 @@ export default function Hero() {
           </a>
           <a
             href="#sobre"
-            className="rounded-full border border-zinc-200 bg-white px-6 py-2.5 text-sm font-semibold text-zinc-700 hover:border-rose-300 hover:text-rose-500 transition-colors active:scale-95"
+            className="rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-6 py-2.5 text-sm font-semibold text-zinc-700 dark:text-zinc-200 hover:border-rose-300 hover:text-rose-500 transition-colors active:scale-95"
           >
             Sobre mim
           </a>
@@ -133,7 +136,7 @@ export default function Hero() {
           >
             <GithubIcon size={20} />
           </a>
-          <span className="h-4 w-px bg-zinc-200" />
+          <span className="h-4 w-px bg-zinc-200 dark:bg-zinc-700" />
           <a
             href="https://www.linkedin.com/in/larissagomes19/"
             target="_blank"
