@@ -1,8 +1,5 @@
-"use client";
-
-import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
-import { twJoin } from "tailwind-merge";
+import { FadeIn } from "./FadeIn";
 
 interface ExperienceItem {
   role: string;
@@ -43,20 +40,15 @@ const EXPERIENCE: ExperienceItem[] = [
 ];
 
 export default function Experience() {
-  const { ref, inView } = useInView();
-
   return (
     <section
       id="experiencia"
-      ref={ref as React.RefObject<HTMLElement>}
       className="py-8 px-5 sm:px-8 bg-zinc-50 dark:bg-zinc-950"
     >
       <div className="mx-auto max-w-3xl">
         <SectionHeading label="Experiência" title="Trajetória profissional" />
 
-        <div
-          className={twJoin("mt-12 flex flex-col gap-0 fade-up", inView && "visible")}
-        >
+        <FadeIn className="mt-12 flex flex-col gap-0">
           {EXPERIENCE.map((item, i) => (
             <div key={i} className="relative flex gap-5 pb-10 last:pb-0">
               <div className="flex flex-col items-center">
@@ -100,7 +92,7 @@ export default function Experience() {
               </div>
             </div>
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

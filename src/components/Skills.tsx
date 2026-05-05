@@ -1,8 +1,5 @@
-"use client";
-
-import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
-import { twJoin } from "tailwind-merge";
+import { FadeIn } from "./FadeIn";
 
 const SKILLS = [
   {
@@ -39,20 +36,15 @@ const SKILLS = [
 ];
 
 export default function Skills() {
-  const { ref, inView } = useInView();
-
   return (
     <section
       id="skills"
-      ref={ref as React.RefObject<HTMLElement>}
       className="py-8 px-5 sm:px-8 bg-zinc-50 dark:bg-zinc-950"
     >
       <div className="mx-auto max-w-5xl">
         <SectionHeading label="Skills" title="Tecnologias & Ferramentas" />
 
-        <div
-          className={twJoin("mt-12 flex flex-col gap-8 fade-up", inView && "visible")}
-        >
+        <FadeIn className="mt-12 flex flex-col gap-8">
           {SKILLS.map((group) => (
             <div key={group.category}>
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
@@ -70,7 +62,7 @@ export default function Skills() {
               </div>
             </div>
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
