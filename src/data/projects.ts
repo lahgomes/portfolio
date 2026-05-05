@@ -15,38 +15,24 @@ export const projects: Project[] = [
       "Aplicação fullstack para organizar candidaturas de emprego. Registre vagas, acompanhe etapas do processo seletivo, adicione anotações por candidatura e controle o status em tempo real. Dashboard com visão geral completa.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
     images: [
-      "/projects/tmj-landing-1.png",
-      "/projects/tmj.png",
-      "/projects/tmj-project-2.png",
-      "/projects/tmj-project-3.png",
+      "/projects/track-my-jobs/tmj-landing-1.png",
+      "/projects/track-my-jobs/tmj.png",
+      "/projects/track-my-jobs/tmj-project-2.png",
+      "/projects/track-my-jobs/tmj-project-3.png",
     ],
     live: "https://tmj-project.vercel.app/",
   },
     {
-    title: "2 TMJ — Track My Jobs",
+    title: "Pokédex",
     description:
-      "Aplicação fullstack para organizar candidaturas de emprego. Registre vagas, acompanhe etapas do processo seletivo, adicione anotações por candidatura e controle o status em tempo real. Dashboard com visão geral completa.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
+      "Essa é o clássico projeto da Pokédex. Uma aplicação frontend para explorar e buscar informações sobre diferentes Pokémons utilizando a API do PokeAPI. Salve seus Pokémons favoritos, visualize informações detalhadas sobre cada um deles e filtre a listagem por tipo.",
+    tags: ["React", "TypeScript", "Vite", "Styled-Components", "Jest", "React Testing Library"],
     images: [
-      "/projects/tmj-landing-1.png",
-      "/projects/tmj.png",
-      "/projects/tmj-project-2.png",
-      "/projects/tmj-project-3.png",
+      "/projects/pokedex/pokedex-1.png",
+      "/projects/pokedex/pokedex-2.png",
+      "/projects/pokedex/pokedex-3.png",
+      "/projects/pokedex/pokedex-4.png",
     ],
-    live: "https://tmj-project.vercel.app/",
-  },
-
-    {
-    title: "3 TMJ — Track My Jobs",
-    description:
-      "Aplicação fullstack para organizar candidaturas de emprego. Registre vagas, acompanhe etapas do processo seletivo, adicione anotações por candidatura e controle o status em tempo real. Dashboard com visão geral completa.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Prisma"],
-    images: [
-      "/projects/tmj-landing-1.png",
-      "/projects/tmj.png",
-      "/projects/tmj-project-2.png",
-      "/projects/tmj-project-3.png",
-    ],
-    live: "https://tmj-project.vercel.app/",
+    live: "https://pokedex-desafio-frontend.vercel.app/",
   },
 ];

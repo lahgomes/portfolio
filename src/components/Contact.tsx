@@ -1,10 +1,7 @@
-"use client";
-
 import { Mail, ArrowUpRight } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
-import { useInView } from "@/hooks/useInView";
 import { SectionHeading } from "./About";
-import { twJoin } from "tailwind-merge";
+import { FadeIn } from "./FadeIn";
 
 const LINKS = [
   {
@@ -31,27 +28,22 @@ const LINKS = [
 ];
 
 export default function Contact() {
-  const { ref, inView } = useInView();
-
   return (
     <section
       id="contato"
-      ref={ref as React.RefObject<HTMLElement>}
       className="py-8 px-5 sm:px-8 bg-zinc-50 dark:bg-zinc-950"
     >
       <div className="mx-auto max-w-3xl">
         <SectionHeading label="Contato" title="Vamos conversar?" />
 
-        <p
-          className={twJoin("mt-5 text-center text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg mx-auto fade-up", inView && "visible")}
-        >
-          Estou aberta a oportunidades, freelas e bate-papos sobre tecnologia.
-          Escolha o canal que preferir e me manda mensagem!
-        </p>
+        <FadeIn className="mt-5 text-center max-w-lg mx-auto">
+          <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Estou aberta a oportunidades, freelas e bate-papos sobre tecnologia.
+            Escolha o canal que preferir e me manda mensagem!
+          </p>
+        </FadeIn>
 
-        <div
-          className={twJoin("mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 fade-up", inView && "visible delay-1")}
-        >
+        <FadeIn className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3" delay>
           {LINKS.map((link) => (
             <a
               key={link.label}
@@ -82,7 +74,7 @@ export default function Contact() {
               </p>
             </a>
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

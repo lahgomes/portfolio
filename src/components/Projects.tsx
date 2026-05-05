@@ -41,16 +41,16 @@ function ProjectImages({ project }: { project: Project }) {
           <button
             onClick={(e) => { e.stopPropagation(); setCurrent((c) => (c - 1 + list.length) % list.length); }}
             aria-label="Imagem anterior"
-            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/90 p-1.5 shadow-md hover:bg-white transition-colors"
+            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/90 p-1.5 shadow-md hover:bg-white transition-colors cursor-pointer"
           >
-            <ChevronLeft size={14} className="text-zinc-700" />
+            <ChevronLeft size={14} className="text-rose-700" />
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % list.length); }}
             aria-label="Próxima imagem"
-            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/90 p-1.5 shadow-md hover:bg-white transition-colors"
+            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/90 p-1.5 shadow-md hover:bg-white transition-colors cursor-pointer"
           >
-            <ChevronRight size={14} className="text-zinc-700" />
+            <ChevronRight size={14} className="text-rose-700" />
           </button>
           <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center gap-1.5 pb-2 pt-5 bg-linear-to-t from-black/50 to-transparent">
             {list.map((_, i) => (
@@ -58,7 +58,7 @@ function ProjectImages({ project }: { project: Project }) {
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
                 aria-label={`Imagem ${i + 1}`}
-                className={twJoin("h-1.5 rounded-full transition-all", i === current ? "w-4 bg-white" : "w-1.5 bg-white/60")}
+                className={twJoin("h-1.5 rounded-full transition-all", i === current ? "w-4 bg-white" : "w-1.5 bg-white/60 cursor-pointer")}
               />
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function Projects() {
               <button
                 onClick={prev}
                 aria-label="Projeto anterior"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm hover:border-rose-300 hover:text-rose-500 transition-colors text-zinc-600 dark:text-zinc-300"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm hover:border-rose-300 hover:text-rose-500 transition-colors text-zinc-600 dark:text-zinc-300 cursor-pointer"
               >
                 <ChevronLeft size={18} />
               </button>
@@ -188,7 +188,7 @@ export default function Projects() {
               <button
                 onClick={next}
                 aria-label="Próximo projeto"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm hover:border-rose-300 hover:text-rose-500 transition-colors text-zinc-600 dark:text-zinc-300"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 shadow-sm hover:border-rose-300 hover:text-rose-500 transition-colors text-zinc-600 dark:text-zinc-300 cursor-pointer"
               >
                 <ChevronRight size={18} />
               </button>
