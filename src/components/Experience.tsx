@@ -5,7 +5,6 @@ interface ExperienceItem {
   role: string;
   company: string;
   period: string;
-  location: string;
   bullets: string[];
   tags: string[];
 }
@@ -15,25 +14,25 @@ const EXPERIENCE: ExperienceItem[] = [
     role: "Desenvolvedora Front-end",
     company: "Promobit",
     period: "Mar 2022 — Fev 2026",
-    location: "Remoto",
     bullets: [
-      "Evolução de Produto: desenvolvimento e otimização de funcionalidades na plataforma web, melhoria de arquitetura de componentes, UX e validação via testes A/B orientados a métricas.",
-      "Performance e SEO: implementação de estratégias de Core Web Vitals e SEO técnico com SemRush e Google Search Console para melhorar o ranqueamento orgânico.",
-      "Design System: desenvolvimento e manutenção do Design System da empresa via Storybook, garantindo consistência visual entre times de UI/UX e engenharia.",
-      "Monitoramento e observabilidade: gestão de bugs e observabilidade em tempo real com Sentry, reduzindo o tempo de resposta a incidentes.",
-      "Projeto interno 'Pricer': desenvolvimento em Python de web scraping de lojas e validação de ofertas, com arquitetura modular (crawlers, serviços e rede), Web API em Flask, Selenium, proxies Webshare e monitoramento com Sentry.",
+      "Desenvolveu e evoluiu funcionalidades em React.js e Next.js em plataforma de alto tráfego, contribuindo para escalabilidade front-end, reutilização de componentes e evolução da experiência do usuário;",
+      "Implementou estratégias de SEO técnico e otimizações de Core Web Vitals utilizando SSR, JSON-LD e análises via Lighthouse, Search Console e SEMrush, contribuindo para evolução do tráfego orgânico e experiência do usuário;",
+      "Atuou na criação e evolução do Design System da empresa via Storybook, aumentando reutilização de componentes e garantindo consistência visual entre squads de produto e engenharia;",
+      "Participou da migração de estilização de Emotion para Tailwind CSS, contribuindo para redução de runtime JavaScript, melhoria de performance da aplicação;",
+      "Implementou estratégias de testes A/B com controle via cookies para validação de hipóteses e análise de impacto em métricas de produto;",
+      "Estruturou monitoramento e observabilidade front-end utilizando Sentry e AWS Lambda, melhorando rastreabilidade de erros e reduzindo tempo de identificação e resolução de incidentes;",
+      "Desenvolveu e manteve o projeto Pricer, uma ferramenta interna em Python para web scraping e validação de ofertas de lojas, utilizando Flask, Selenium, proxies Webshare, Docker e arquitetura modular baseada em crawlers e serviços, resultando no aumento da confiabilidade e escalabilidade do processo de entrada e validação de ofertas no site.",
     ],
-    tags: ["Next.js", "Tailwind CSS", "React Query", "TypeScript", "Storybook", "Sentry", "Python", "Docker"],
+    tags: ["Next.js", "Tailwind CSS", "TanStack React Query", "TypeScript", "Storybook", "Sentry", "Python", "Docker", "SemRush", "Testes A/B", "SEO Técnico", "Core Web Vitals", "AWS Lambda", "GitHub Actions"],
   },
   {
-    role: "Desenvolvedora Front-end Jr.",
+    role: "Desenvolvedora Front-end Jr",
     company: "Projeto Toraline",
     period: "Out 2021 — Fev 2022",
-    location: "Santos, SP",
     bullets: [
-      "Desenvolvimento de plataforma educacional com React e Next.js",
-      "Criação de landing pages e interfaces responsivas mobile-first",
-      "Integração com APIs REST e gestão de estado",
+      "Desenvolveu uma plataforma educacional com React e Next.js",
+      "Criou landing pages e interfaces responsivas mobile-first",
+      "Integrou com APIs REST e gestão de estado",
     ],
     tags: ["React", "Next.js", "JavaScript", "HTML", "CSS", "Scrum"],
   },
@@ -66,7 +65,6 @@ export default function Experience() {
                   </div>
                   <div className="text-right shrink-0">
                     <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">{item.period}</p>
-                    <p className="text-xs text-zinc-400 dark:text-zinc-500">{item.location}</p>
                   </div>
                 </div>
 

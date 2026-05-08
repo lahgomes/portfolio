@@ -13,7 +13,7 @@ const FORMATION = [
     institution: "Universidade Anhembi Morumbi — SP",
     period: "2026 — 2027 (cursando)",
     description:
-      "Especialização em inteligência artificial, machine learning e análise de dados, com aplicação prática em projetos reais.",
+      "Pós-graduação focada em Inteligência Artificial e Ciência de Dados, com estudos em Machine Learning, Big Data Analytics, Processamento de Linguagem Natural (NLP), Processamento de dados massivos e Arquitetura de soluções orientadas a dados, UX aplicada à IA e Soluções orientadas a dados para produtos digitais.",
   },
   {
     icon: <GraduationCap size={20} />,
@@ -21,7 +21,7 @@ const FORMATION = [
     institution: "UFOP — Universidade Federal de Ouro Preto",
     period: "Concluído em 2018",
     description:
-      "Formação multidisciplinar com foco em projeto, planejamento urbano e pensamento sistêmico — base sólida para UX e design de interfaces.",
+      "Formação com foco em pensamento analítico, resolução de problemas, desenvolvimento de projetos centrados em funcionalidade e usabilidade — base sólida para UX e design de interfaces.",
   },
 ];
 
@@ -44,27 +44,27 @@ const COURSES = [
   },
   {
     icon: <BookOpen size={20} />,
+    degree: "IA para Devs",
+    institution: "Full Cycle",
+    period: "2026",
+    description:
+      "Imersão prática sobre uso de IA no fluxo de desenvolvimento, explorando LLMs, automação de tarefas, produtividade em engenharia de software e integração de ferramentas baseadas em IA no desenvolvimento moderno.",
+  },
+  {
+    icon: <BookOpen size={20} />,
     degree: "Imersão Front-end",
     institution: "Alura",
     period: "2024",
     description:
-      "Intensivo de front-end com React, boas práticas de desenvolvimento web e criação de um chat de conversas ao vivo com Supabase.",
+      "Desenvolvimento de aplicações front-end moderna com React e Next.js, abordando Clean Code, responsividade e atividade prática com a criação de um chat de conversas ao vivo com Supabase.",
   },
     {
     icon: <BookOpen size={20} />,
-    degree: "JavaScript ES6",
+    degree: "JavaScript ES6 e CSS Flexbox",
     institution: "Origamid",
     period: "2022",
     description:
-      "Fundamentos modernos de JavaScript, Node.js e layout responsivo com CSS Flexbox.",
-  },
-   {
-    icon: <BookOpen size={20} />,
-    degree: "CSS Flexbox",
-    institution: "Origamid",
-    period: "2021",
-    description:
-      "Fundamentos do CSS e layout responsivo com CSS Flexbox.",
+      "Fundamentos modernos de JavaScript e layout responsivo com CSS Flexbox com aplicação prática.",
   },
   {
     icon: <BookOpen size={20} />,
@@ -72,7 +72,7 @@ const COURSES = [
     institution: "DIO",
     period: "2021",
     description:
-      "Fundamentos de desenvolvimento web: HTML estrutural, versionamento com Git e lógica de programação.",
+      "Fundamentos de desenvolvimento web: HTML, versionamento com Git e lógica de programação.",
   },
 ];
 

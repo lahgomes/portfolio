@@ -60,12 +60,11 @@ export default function About() {
             </div>
           </div>
 
-
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 text-balance">
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
               Sou desenvolvedora front-end com 4 anos de experiência em{" "}
               <strong className="text-zinc-800 dark:text-zinc-100">React, Next.js e TypeScript</strong>,
-              construindo produtos web com foco em performance, SEO técnico e experiência do usuário.
+              construindo produtos web com foco em performance, SEO técnico e  <strong className="text-zinc-800 dark:text-zinc-100">experiência do usuário</strong>.
             </p>
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
               Já atuei na evolução de produtos e arquitetura de componentes,
@@ -73,16 +72,11 @@ export default function About() {
               <strong className="text-zinc-800 dark:text-zinc-100">Core Web Vitals</strong>{" "}
               que melhoraram a performance do site e também já construi um {" "}
               <strong className="text-zinc-800 dark:text-zinc-100">Design System</strong>{" "}
-
             </p>
 
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
               Atualmente, estou expandindo meus conhecimentos como desenvolvedora <strong className="text-zinc-800 dark:text-zinc-100">Full Stack</strong> com{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Banco de Dados e Python</strong>. </p>
-              <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed"> Além disso, estou me especializando
-              cursando uma pós-graduação em{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Inteligência Artificial e Ciência de Dados</strong>{" "} </p>
-
+              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Banco de Dados e Python</strong>. E também, cursando uma pós-graduação em <strong className="text-zinc-800 dark:text-zinc-100">Inteligência Artificial e Ciência de Dados</strong>.</p>
 
 
             <div className="flex flex-wrap gap-2 pt-1">
@@ -117,6 +111,7 @@ export default function About() {
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
