@@ -7,7 +7,7 @@ const SKILLS = [
     items: [
       "HTML5", "CSS3", "JavaScript", "TypeScript",
       "React", "Next.js", "Tailwind CSS", "Vite",
-      "Styled-Components", "SASS", "React Query", "React Hooks", "Git","Jest", "React Testing Library", "Server-Side Rendering (SSR)", "API REST"
+      "Styled-Components", "SASS", "React Query", "React Hooks", "Git","Jest", "React Testing Library", "Server-Side Rendering (SSR)", "SSG", "API REST", "Testes A/B", "Design System"
     ],
   },
   {
@@ -31,7 +31,7 @@ const SKILLS = [
   },
   {
     category: "Em evolução",
-    items: ["Python", "Node.js", "Express", "Banco de Dados", "PostgreSQL"],
+    items: ["Python", "Node.js", "Express", "Banco de Dados", "PostgreSQL", "Arquitetura de Software", "Full Stack Development", "Inteligência Artificial", "Ciência de Dados"],
   },
 ];
 

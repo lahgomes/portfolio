@@ -60,23 +60,25 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5 text-balance">
+          <div className="flex flex-col gap-5 ">
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-              Sou desenvolvedora front-end com 4 anos de experiência em{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">React, Next.js e TypeScript</strong>,
-              construindo produtos web com foco em performance, SEO técnico e  <strong className="text-zinc-800 dark:text-zinc-100">experiência do usuário</strong>.
+              Desenvolvedora front-end com 4 anos de experiência em{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">React.js, Next.js e TypeScript</strong>,
+              construindo aplicações escaláveis com foco em performance e <strong className="text-zinc-800 dark:text-zinc-100">SEO técnico</strong>.            </p>
+            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">              Gosto de pensar no produto como um todo, não apenas na interface, mas na experiência do usuário completa.
+              Já atuei na evolução de produtos e features, otimizações para{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Core Web Vitals</strong>,
+              testes A/B e a criação de{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Design System</strong> com Storybook.
             </p>
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-              Já atuei na evolução de produtos e arquitetura de componentes,
-              implementei estratégias de{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Core Web Vitals</strong>{" "}
-              que melhoraram a performance do site e também já construi um {" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Design System</strong>{" "}
+              Atualmente expandindo para o backend com{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Python</strong>
+              e arquitetura de software com foco em evoluir para{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Full Stack</strong>. Além disso, cursando
+              uma pós-graduação em{" "}
+              <strong className="text-zinc-800 dark:text-zinc-100">Inteligência Artificial e Ciência de Dados</strong>.
             </p>
-
-            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
-              Atualmente, estou expandindo meus conhecimentos como desenvolvedora <strong className="text-zinc-800 dark:text-zinc-100">Full Stack</strong> com{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Banco de Dados e Python</strong>. E também, cursando uma pós-graduação em <strong className="text-zinc-800 dark:text-zinc-100">Inteligência Artificial e Ciência de Dados</strong>.</p>
 
 
             <div className="flex flex-wrap gap-2 pt-1">

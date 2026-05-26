@@ -39,7 +39,7 @@ export default function Contact() {
         <FadeIn className="mt-5 text-center max-w-lg mx-auto">
           <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
             Estou aberta a oportunidades, freelas e bate-papos sobre tecnologia.
-            Escolha o canal que preferir e me manda mensagem!
+
           </p>
         </FadeIn>
 

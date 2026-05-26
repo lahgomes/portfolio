@@ -26,6 +26,14 @@ const FORMATION = [
 ];
 
 const COURSES = [
+   {
+    icon: <BookOpen size={20} />,
+    degree: "Especialista em Inteligência Artificial",
+    institution: "Santander Academy",
+    period: "2026",
+    description:
+      "Capacitação em IA generativa, engenharia de prompt, fundamentos de machine learning,   Python para data science e aplicações práticas de IA no desenvolvimento de software.",
+  },
   {
     icon: <BookOpen size={20} />,
     degree: "Claude Code in Action",
@@ -100,9 +108,9 @@ export default function Education() {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={twJoin(
-                "rounded-lg px-4 py-2 text-sm font-medium transition-all",
+                "rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer",
                 activeTab === tab
-                  ? "bg-white dark:bg-zinc-700 shadow-sm text-zinc-900 dark:text-zinc-100"
+                  ? "bg-white dark:bg-zinc-700 shadow-sm text-rose-500 dark:text-rose-500"
                   : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200"
               )}
             >
