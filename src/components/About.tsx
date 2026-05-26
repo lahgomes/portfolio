@@ -73,7 +73,7 @@ export default function About() {
             </p>
             <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
               Atualmente expandindo para o backend com{" "}
-              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Python</strong>
+              <strong className="text-zinc-800 dark:text-zinc-100">Node.js, Python </strong>
               e arquitetura de software com foco em evoluir para{" "}
               <strong className="text-zinc-800 dark:text-zinc-100">Full Stack</strong>. Além disso, cursando
               uma pós-graduação em{" "}
